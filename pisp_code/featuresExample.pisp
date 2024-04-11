@@ -44,7 +44,7 @@ BOOL
 ;asciiZero = 48;
 
 ;strings;
-(set string (make-string '(Hello World! #1 #2 #3)))
+(set string (make-string '(Hello World! 1 2 3)))
 ;string is array of bytes;
 ;string = ByteArray [72,101,108,108,111,32,87,111,114,108,100,33,49,32,50,32,51];
 (get string 2) = 108
@@ -56,7 +56,7 @@ BOOL
 
 ;recursion;
 (defun incrementXTimes (n x)
- (incrementXTimes (+ 1 n) (- 1 x))
+ (incrementXTimes (+ 1 n) (- x 1))
 )
 (set resultRecursiveFunction (incrementXTimes 2 5))
 ;resultRecursiveFunction = 7;
