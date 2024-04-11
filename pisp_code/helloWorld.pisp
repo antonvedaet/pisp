@@ -1,3 +1,4 @@
+;test comment;
 (pi
 (print '(Hello world!))
 sp)
