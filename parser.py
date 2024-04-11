@@ -17,5 +17,25 @@ class Parser:
             return s.strip().replace("\n", "")
         else:
             raise Exception("NOT PISP")
-    
-    # def parse_one_function(code: str) -> str:
+
+    def strip_one(s: str) -> str:
+        match = re.search(r'\((.*)\)', s)
+        if match:
+            return match.group(1)
+        else:
+            return None
+
+    def parse_one(s: str) -> dict:
+        match = re.search(r'\((.*)\)', s)
+        if match:
+            d = match.group(1)
+            if "(" in d:
+                higher_order_f = Parser.parse_one(d)
+                d = d.replace("(" + Parser.strip_one(d) + ")", "")
+                d = d.split()
+                args = d[1:]
+                args.append(higher_order_f)
+                return {"name": d[0], "args": args}
+            else:
+                d = d.split()
+                return {"name": d[0], "args": d[1:]}
