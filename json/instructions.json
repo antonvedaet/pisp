@@ -1,0 +1,88 @@
+{
+    "instructions": [
+        {
+            "name": "LOAD",
+            "argument_type": "value",
+            "comment": "load given value into the accumulator"
+        },
+        {
+            "name": "STORE",
+            "argument_type": "address",
+            "comment": "store accumulated value into given address"
+        },
+        {
+            "name": "ADD",
+            "argument_type": "value",
+            "comment": "add argument value to the accumulated value"
+        },        {
+            "name": "MUL",
+            "argument_type": "value",
+            "comment": "multiply accumulated value by argument value"
+        },
+        {
+            "name": "DIV",
+            "argument_type": "value",
+            "comment": "divide accumulated value by argument value"
+        },
+        {
+            "name": "MOD",
+            "argument_type": "value",
+            "comment": "compute remainder of accumulated value divided by argument value"
+        },
+        {
+            "name": "AND",
+            "argument_type": "value",
+            "comment": "compute logical AND of accumulated value and argument value"
+        },
+        {
+            "name": "OR",
+            "argument_type": "value",
+            "comment": "compute logical OR of accumulated value and argument value"
+        },
+        {
+            "name": "NOT",
+            "argument_type": "value",
+            "comment": "compute logical NOT of accumulated value"
+        },
+        {
+            "name": "JMP",
+            "argument_type": "address",
+            "comment": "jump to given address"
+        },
+        {
+            "name": "JZ",
+            "argument_type": "address",
+            "comment": "jump to given address if accumulated value is zero"
+        },
+        {
+            "name": "IN",
+            "argument_type": "none",
+            "comment": "read input from user and store in accumulator"
+        },
+        {
+            "name": "OUT",
+            "argument_type": "none",
+            "comment": "print accumulated value to console"
+        },
+        {
+            "name": "SUB",
+            "argument_type": "value",
+            "comment": "subtract argument value from the accumulated value"
+        },
+        {
+            "name": "GET",
+            "argument_type": "address",
+            "comment": "get value from given address and store in accumulator"
+        },
+        {
+            "name": "CALL",
+            "argument_type": "address",
+            "comment": "call function at given address and store return value in accumulator"
+        },
+        {
+            "name": "RET",
+            "argument_type": "none",
+            "comment": "return from function call and restore accumulator to previous value"
+        }
+    ]
+}
