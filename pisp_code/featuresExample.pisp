@@ -47,7 +47,7 @@ BOOL
 (set string (make-string '(Hello World! 1 2 3)))
 ;string is array of bytes;
 ;string = ByteArray [72,101,108,108,111,32,87,111,114,108,100,33,49,32,50,32,51];
-(get string 2) = 108
+;(get string 2) = 108;
 
 ;functions;
 (defun increment (n) (+ n 1))

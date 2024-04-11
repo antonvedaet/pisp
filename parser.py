@@ -1,4 +1,5 @@
 import re
+import json
 class Parser:
     def is_pisp(s: str) -> bool:
         return (s.startswith('(pi') and s.endswith('sp)'))
@@ -39,3 +40,21 @@ class Parser:
             else:
                 d = d.split()
                 return {"name": d[0], "args": d[1:]}
+    
+    def parse_whole_file(s: str) -> list:
+        code = re.findall(r'\([^()]*\)|\([^()]*\([^()]*\)[^()]*\)', s)
+        result = []
+        for i in range(len(code)):
+            result.append(Parser.parse_one(code[i]))
+        return result
+
+    def run(s: str, out_file = None) -> list:
+        s = Parser.prepare(s)
+        res = Parser.parse_whole_file(s)
+        if out_file == None:
+            return res
+        else:
+            with open(out_file, "w") as file:
+                file.write(json.dumps({"code":res}))
+                file.close()
+            return res

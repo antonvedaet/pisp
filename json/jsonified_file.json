@@ -1,0 +1,60 @@
+{
+  "code": [
+    { "name": "set", "args": ["result", "2"] },
+    {
+      "name": "set",
+      "args": ["resultSum", { "name": "+", "args": ["1", "2"] }]
+    },
+    {
+      "name": "set",
+      "args": ["resultDiff", { "name": "-", "args": ["41", "45"] }]
+    },
+    {
+      "name": "set",
+      "args": ["resultDivision", { "name": "/", "args": ["6", "2"] }]
+    },
+    {
+      "name": "set",
+      "args": ["resultMod", { "name": "modulo", "args": ["5", "2"] }]
+    },
+    {
+      "name": "set",
+      "args": ["resultMul", { "name": "*", "args": ["5", "2"] }]
+    },
+    {
+      "name": "make-arr",
+      "args": ["'", { "name": "1", "args": ["2", "3", "4"] }]
+    },
+    { "name": "set", "args": ["asciiZero", "#0"] },
+    {
+      "name": "make-string",
+      "args": ["'", { "name": "Hello", "args": ["World!", "1", "2", "3"] }]
+    },
+    { "name": "n", "args": [] },
+    { "name": "+", "args": ["n", "1"] },
+    {
+      "name": "set",
+      "args": ["customFuncResult", { "name": "increment", "args": ["2"] }]
+    },
+    { "name": "+", "args": ["1", "n"] },
+    { "name": "-", "args": ["x", "1"] },
+    {
+      "name": "set",
+      "args": [
+        "resultRecursiveFunction",
+        { "name": "incrementXTimes", "args": ["2", "5"] }
+      ]
+    },
+    {
+      "name": "set",
+      "args": ["userInput", { "name": "read-input", "args": [] }]
+    },
+    {
+      "name": "print",
+      "args": ["'", { "name": "Hello,", "args": ["World!"] }]
+    },
+    { "name": "set", "args": ["truth", { "name": ">", "args": ["5", "1"] }] },
+    { "name": "set", "args": ["n", "25"] },
+    { "name": "if", "args": ["1", "0", { "name": ">", "args": ["n", "100"] }] }
+  ]
+}
