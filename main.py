@@ -1,8 +1,8 @@
 from parser import Parser
 
-with open("./pisp_code/featuresExample.pisp") as file:
+with open("./pisp_code/helloWorld.pisp") as file:
     f = file.read()
 
-print(Parser.run(f, "./json/jsonified_file.json"))
+print(Parser.parse(Parser.prepare("(pi(defun incrementXTimes (n x) (incrementXTimes (+ 1 n) (- x 1)))sp)")))
 
 
