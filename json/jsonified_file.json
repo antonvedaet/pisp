@@ -1,1 +1,0 @@
-{"code": [{"name": "print", "args": ["'", "name", "args"]}, {"name": "+", "args": ["12", "2"]}, {"name": "+", "args": ["14", "3"]}, {"name": "n", "args": ["x"]}, {"name": "+", "args": ["1", "n"]}, {"name": "-", "args": ["x", "1"]}]}
