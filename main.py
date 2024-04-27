@@ -7,3 +7,4 @@ with open("./pisp_code/helloWorld.pisp") as file:
 
 parsed_code = Parser.run(f)
 print(Translator.to_json("./json/jsonified.json", Translator.translate(parsed_code[1])))
+print(parsed_code)
