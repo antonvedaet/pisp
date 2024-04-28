@@ -14,18 +14,19 @@ class Translator:
                hex(6): "ADD"
                #not finished
                }
+
     def string_to_bytes(s: str) -> list:
         return [ord(l) for l in s]
 
-    def translate(a: list):
+    def translate(tokens: list):
         res = []
-        match a[0]:
+        match tokens[0]:
             
             case "print":
-                if a[1] == "\'":
+                if tokens[1] == "\'":
                     #saving in memory
                     
-                    for n, i in enumerate(" ".join(a[-1])):
+                    for n, i in enumerate(" ".join(tokens[-1])):
                         
                         res.append({"OPCODE" : hex(1),
                                     "INSTRUCTION": Translator.opcodes.get(hex(1)),
@@ -39,7 +40,7 @@ class Translator:
                                 "INSTRUCTION": Translator.opcodes.get(hex(4)),
                                 "OPERAND": hex(Translator.BYTE_MEMORY_START)})
                     #printing each byte
-                    for n, _ in enumerate(" ".join(a[-1])):
+                    for n, _ in enumerate(" ".join(tokens[-1])):
                         
                         res.append({"OPCODE" : hex(1),
                                     "INSTRUCTION": Translator.opcodes.get(hex(1)),
@@ -49,8 +50,8 @@ class Translator:
                                     "INSTRUCTION": Translator.opcodes.get(hex(3)),
                                     "OPERAND": "NO_OPERAND"})
                         
-                if a[1] != "\'":
-                    res += Translator.translate(a[1])
+                if tokens[1] != "\'":
+                    res += Translator.translate(tokens[1])
                     res.append({"OPCODE" : hex(3),
                                 "INSTRUCTION": Translator.opcodes.get(hex(3)),
                                 "OPERAND": "NO_OPERAND"})
@@ -59,28 +60,43 @@ class Translator:
                 
             case "+":
 
-                if all([isinstance(i, int) or len(i) == 1 for i in a]) and len(a) == 3:
+                if all([isinstance(i, int) or len(i) == 1 for i in tokens]) and len(tokens) == 3:
                     
                     res.append({
                         "OPCODE": hex(6),
                         "INSTRUCTION": Translator.opcodes.get(hex(6)),
-                        "OPERAND": a[1]
+                        "OPERAND": tokens[1]
                     })
                     
                     res.append({
                         "OPCODE": hex(6),
                         "INSTRUCTION": Translator.opcodes.get(hex(6)),
-                        "OPERAND": a[2]
+                        "OPERAND": tokens[2]
                     })
                 else:
-                    for i in a:
-                        if len(i) != 1:
+                    for i in tokens:
+                        if not isinstance(i, int) and len(i) != 1:
                             res+=Translator.translate(i) #  FIXME
+                        if isinstance(i, int):
+                            res.append({
+                        "OPCODE": hex(6),
+                        "INSTRUCTION": Translator.opcodes.get(hex(6)),
+                        "OPERAND": i
+                    })
                 
                     
             case _:
                 raise ValueError("Invalid pisp syntax")
         
+        return res
+
+    def translate_clean(tokens: list):
+        res = Translator.translate(tokens)
+        res.insert(0, {
+                        "OPCODE": hex(1),
+                        "INSTRUCTION": Translator.opcodes.get(hex(1)),
+                        "OPERAND": 0
+                    })
         return res
     
     def to_json(file, instrs: list):
