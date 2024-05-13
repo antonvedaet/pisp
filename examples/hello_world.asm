@@ -1,6 +1,10 @@
 .data
-    s: "hello world"
-
+    s: 15
 .code 
     begin:
-        out 
+        load 2
+        store &3  
+        lbl:
+            load &3
+        hlt
+    end

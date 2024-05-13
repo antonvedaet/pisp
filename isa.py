@@ -27,6 +27,8 @@ class OpCode(Enum):
     LOAD = Operation("load", OpType.ARG)
     STORE = Operation("store", OpType.ARG)
     NOP = Operation("nop", OpType.ARG)
+    JMP = Operation("jmp", OpType.ARG)
+    HLT = Operation("hlt", OpType.NARG)
     
     
     def get_type(self):

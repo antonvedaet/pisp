@@ -1,4 +1,4 @@
-from isa import MAX_INSTR_ADDRESS
+from isa import *
 
 
 class Translator:
@@ -31,12 +31,18 @@ class Translator:
             elif section is not None:
                 section.append(line)
         return data, code
+    
 
+
+    def translate(self, src):
+        data, code = self.sections(src)
+        return data, code
 
 class Instruction:
 
-    def __init__(self, idx, opcode, type, operand):
+    def __init__(self, idx, opcode, type, operand, address):
         self.idx = idx
         self.opcode = opcode
         self.type = type
         self.operand = operand
+        self.address = address
