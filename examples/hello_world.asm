@@ -7,5 +7,5 @@
         store &3  
         lbl:
             load &3
-        hlt
+        :lbl
     end

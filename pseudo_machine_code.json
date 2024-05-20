@@ -1,0 +1,32 @@
+[
+    {
+        "idx": 0,
+        "opcode": "nop",
+        "operand": "0xf",
+        "address": false
+    },
+    {
+        "idx": 1,
+        "opcode": "nop",
+        "operand": "0x145",
+        "address": false
+    },
+    {
+        "idx": 2,
+        "opcode": "load",
+        "operand": "0x2",
+        "address": false
+    },
+    {
+        "idx": 3,
+        "opcode": "store",
+        "operand": "0x3",
+        "address": true
+    },
+    {
+        "idx": 4,
+        "opcode": "load",
+        "operand": "0x3",
+        "address": true
+    }
+]
