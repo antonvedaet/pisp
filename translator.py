@@ -6,12 +6,12 @@ class Translator:
 
     def __init__(self):
         self.instructions = []
-        self.current_address = -1
-        self.labels = []
+        self.current_address = 0
+        self.labels = {}
         
     def next_address(self):
         self.current_address += 1
-        return self.current_address
+        return hex((self.current_address))
     
     def sections(self, source):
         stripped_src = []
@@ -40,6 +40,13 @@ class Translator:
         instruction, operand = line.split()
         for opcode in OpCode:
             if str(opcode) == instruction:
+                if str(opcode) == "jmp" and operand in self.labels.keys():
+                    return {
+                        "idx": self.next_address(),
+                        "opcode": str(opcode),
+                        "operand": hex(eval(self.labels[operand])),
+                        "address": False
+                    }
                 if "&" not in operand:
                     return {
                         "idx": self.next_address(),
@@ -61,14 +68,16 @@ class Translator:
 
     def translate_code(self, code):
         for line in code:
+            if line == "begin:":
+                continue
             if line[-1]==":":
+                self.labels[line[:-1]] = hex(self.current_address+1)
                 continue
             if line[0]==":":
                 continue
             if line == "end":
                 break
-            else:
-                self.instructions.append(self.parse_instruction(line))
+            self.instructions.append(self.parse_instruction(line))
 
     def translate(self, src):
         data, code = self.sections(src)

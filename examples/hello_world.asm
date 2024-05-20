@@ -7,5 +7,8 @@
         store &3  
         lbl:
             load &3
-        :lbl
+            load &4
+        jmp lbl
+        jmp 3
+        store 24
     end
