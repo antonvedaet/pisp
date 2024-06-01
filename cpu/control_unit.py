@@ -7,8 +7,8 @@ class ControlUnit:
     def __init__():
         self.acc = Accumulator()
         self.IP = 0
-        self.datamem = []
-        self.instrmem = []
+        self.datamem = DataMemory()
+        self.instrmem = InstructionMemory()
     
     
     
