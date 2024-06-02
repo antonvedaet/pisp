@@ -5,13 +5,13 @@ from ALU import ALU
 
 class ControlUnit:
     
-    def __init__(self):
+    def __init__(self, ram, rom):
         self.acc = Register()
         self.ir = Register()
         self.pc = Register()
         self.ip = Register()
-        self.ram = DataMemory(2048)
-        self.rom = InstructionMemory(2048)
+        self.ram = ram
+        self.rom = rom
         self.ALU = ALU()
     
     

@@ -1,54 +1,54 @@
 [
     {
-        "idx": "0x1",
+        "idx": "0x2",
         "opcode": "nop",
         "operand": "0xf",
         "address": false
     },
     {
-        "idx": "0x2",
+        "idx": "0x3",
         "opcode": "nop",
         "operand": "0x145",
         "address": false
     },
     {
-        "idx": "0x3",
+        "idx": "0x0",
         "opcode": "load",
         "operand": "0x2",
         "address": false
     },
     {
-        "idx": "0x4",
+        "idx": "0x1",
         "opcode": "store",
         "operand": "0x3",
         "address": true
     },
     {
-        "idx": "0x5",
+        "idx": "0x2",
         "opcode": "load",
         "operand": "0x3",
         "address": true
     },
     {
-        "idx": "0x6",
+        "idx": "0x3",
         "opcode": "load",
         "operand": "0x4",
         "address": true
     },
     {
-        "idx": "0x7",
+        "idx": "0x4",
         "opcode": "jmp",
-        "operand": "0x5",
+        "operand": "0x2",
         "address": false
     },
     {
-        "idx": "0x8",
+        "idx": "0x5",
         "opcode": "jmp",
         "operand": "0x3",
         "address": false
     },
     {
-        "idx": "0x9",
+        "idx": "0x6",
         "opcode": "store",
         "operand": "0x145",
         "address": false
