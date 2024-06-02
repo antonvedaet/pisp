@@ -6,5 +6,4 @@ class InstructionMemory:
     def read(self, address):
         return self.memory[address]
 
-    def write(self, address, instr, operand):
-        self.memory[address] = {instr: operand}
+    
