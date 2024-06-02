@@ -1,3 +1,3 @@
 # pisp
 Вариант:  
-```asm | acc | harv | hw | tick -> instr | struct | stream | mem | cstr | prob2 ```
+```asm | acc | harv | hw | instr | struct | stream | mem | cstr | prob2 ```

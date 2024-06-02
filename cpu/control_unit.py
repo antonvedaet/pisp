@@ -5,7 +5,7 @@ from ALU import ALU
 
 class ControlUnit:
     
-    def __init__():
+    def __init__(self):
         self.acc = Register()
         self.ir = Register()
         self.pc = Register()

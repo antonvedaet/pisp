@@ -50,7 +50,7 @@
     {
         "idx": "0x9",
         "opcode": "store",
-        "operand": "0x18",
+        "operand": "0x145",
         "address": false
     }
 ]

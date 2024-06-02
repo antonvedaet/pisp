@@ -10,6 +10,5 @@
             load &4
         jmp lbl
         jmp 3
-        store 24
-        hlt
+        store skibidi
     end

@@ -8,6 +8,7 @@ class Translator:
         self.instructions = []
         self.current_address = 0
         self.labels = {}
+        self.vars = {}
         
     def next_address(self):
         self.current_address += 1
@@ -30,9 +31,6 @@ class Translator:
                 section = code
             elif section is not None:
                 section.append(line)
-        print(data)
-        print("--------")
-        print(code)
         return data, code
     
 
@@ -48,12 +46,20 @@ class Translator:
                         "address": False
                     }
                 if "&" not in operand:
-                    return {
-                        "idx": self.next_address(),
-                        "opcode": str(opcode),
-                        "operand": hex(eval(operand)),
-                        "address": False
-                    }
+                    if not operand.isdigit():
+                        return {
+                            "idx": self.next_address(),
+                            "opcode": str(opcode),
+                            "operand": self.vars[operand],
+                            "address": False
+                        }
+                    else:    
+                        return {
+                            "idx": self.next_address(),
+                            "opcode": str(opcode),
+                            "operand": hex(eval(operand)),
+                            "address": False
+                        }
                 if "&" in operand:
                     return {
                         "idx": self.next_address(),
@@ -63,7 +69,9 @@ class Translator:
                     }
 
     def translate_data(self, data):
-        [self.instructions.append({"idx" : self.next_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(eval(i.split()[-1])), "address" : False}) for i in data]
+        for i in data:
+            self.instructions.append({"idx" : self.next_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(eval(i.split()[-1])), "address" : False})
+            self.vars[i.split(":")[0]] = hex(eval(i.split()[-1]))
         return 
 
     def translate_code(self, code):
