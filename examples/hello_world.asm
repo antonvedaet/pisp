@@ -1,6 +1,7 @@
 .data
     s: 15
     skibidi: 325
+    dota: "dota2"
 .code 
     begin:
         load 2
