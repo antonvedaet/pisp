@@ -21,13 +21,14 @@ for i in mc:
         rom.memory = instrcopy
 
 
-# print(ram.memory)
+print(ram.memory)
 # print(rom.memory)
 data_path = DataPath(rom, ram)
 control_unit = ControlUnit(data_path)
 
 control_unit.data_path.fetch_instruction()
+control_unit.do_load()
 control_unit.data_path.fetch_instruction()
-control_unit.data_path.fetch_instruction()
-
-print(control_unit.data_path.cr)
+control_unit.do_store()
+print(ram.memory)
+print(control_unit.data_path.acc)

@@ -15,12 +15,12 @@
         "idx": "0x0",
         "opcode": "load",
         "operand": "0x2",
-        "address": false
+        "address": true
     },
     {
         "idx": "0x1",
         "opcode": "store",
-        "operand": "0x3",
+        "operand": "0x6",
         "address": true
     },
     {

@@ -10,6 +10,10 @@ class DataPath:
         self.ram = ram
     
     def fetch_instruction(self):
-        self.cr = self.rom.read(self.ip)
+        self.ar = self.ip
+
+        self.cr = self.rom.read(self.ar)
+
         self.ip += 1
 
+    
