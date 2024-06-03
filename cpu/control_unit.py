@@ -41,6 +41,7 @@ class ControlUnit:
     def do_store(self):
         assert self.data_path.cr["address"] == True
         self.data_path.ar = self.data_path.cr["operand"]
+        self.data_path.dr = self.data_path.ar
         self.data_path.ram.write(int(self.data_path.ar, 16), self.data_path.acc)
         self.data_path.alu_flags()
         return "STORE: ACC => RAM[AR]"
