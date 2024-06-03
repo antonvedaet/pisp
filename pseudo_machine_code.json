@@ -25,24 +25,36 @@
     },
     {
         "idx": "0x2",
+        "opcode": "add",
+        "operand": "0x34",
+        "address": false
+    },
+    {
+        "idx": "0x3",
+        "opcode": "mod",
+        "operand": "0x5",
+        "address": false
+    },
+    {
+        "idx": "0x4",
         "opcode": "load",
         "operand": "0x3",
         "address": true
     },
     {
-        "idx": "0x3",
+        "idx": "0x5",
         "opcode": "load",
         "operand": "0x4",
         "address": true
     },
     {
-        "idx": "0x4",
+        "idx": "0x6",
         "opcode": "load",
         "operand": "0xf",
         "address": false
     },
     {
-        "idx": "0x5",
+        "idx": "0x7",
         "opcode": "store",
         "operand": "0x145",
         "address": true

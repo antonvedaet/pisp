@@ -12,7 +12,12 @@ class ControlUnit:
         self.operations={
             "jmp": self.do_jump,
             "load": self.do_load,
-            "store": self.do_store
+            "store": self.do_store,
+            "add": self.do_add,
+            "sub": self.do_sub,
+            # "div": self.do_div,
+            # "mul": self.do_mul,
+            "mod": self.do_mod
         }
     
     def run(self):
@@ -48,3 +53,57 @@ class ControlUnit:
         self.data_path.ip = self.data_path.ar
         return "JUMP: IP => AR"
 
+    def do_add(self):
+        if self.data_path.cr["address"] == False:
+            self.data_path.dr = self.data_path.cr["operand"]
+            self.ALU.add(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+            self.data_path.acc = hex(self.ALU.value)
+        else:
+            self.data_path.dr = self.data_path.ram.read(int(self.data_path.cr["operand"], 16))
+            self.ALU.add(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+            self.data_path.acc = hex(self.ALU.value)
+        return "ADD: ACC + DR => ACC"
+    
+    def do_sub(self):
+        if self.data_path.cr["address"] == False:
+            self.data_path.dr = self.data_path.cr["operand"]
+            self.ALU.sub(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+            self.data_path.acc = hex(self.ALU.value)
+        else:
+            self.data_path.dr = self.data_path.ram.read(int(self.data_path.cr["operand"], 16))
+            self.ALU.sub(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+            self.data_path.acc = hex(self.ALU.value)
+        return "SUB: ACC - DR => ACC"
+
+    # def do_div(self):
+    #     if self.data_path.cr["address"] == False:
+    #         self.data_path.dr = self.data_path.cr["operand"]
+    #         self.ALU.div(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+    #         self.data_path.acc = hex(self.ALU.value)
+    #     else:
+    #         self.data_path.dr = self.data_path.ram.read(int(self.data_path.cr["operand"], 16))
+    #         self.ALU.div(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+    #         self.data_path.acc = hex(self.ALU.value)
+    #     return "DIV: ACC / DR => ACC"
+
+    # def do_mul(self):
+    #     if self.data_path.cr["address"] == False:
+    #         self.data_path.dr = self.data_path.cr["operand"]
+    #         self.ALU.mul(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+    #         self.data_path.acc = hex(self.ALU.value)
+    #     else:
+    #         self.data_path.dr = self.data_path.ram.read(int(self.data_path.cr["operand"], 16))
+    #         self.ALU.mul(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+    #         self.data_path.acc = hex(self.ALU.value)
+    #     return "MUL: ACC * DR => ACC"
+
+    def do_mod(self):
+        if self.data_path.cr["address"] == False:
+            self.data_path.dr = self.data_path.cr["operand"]
+            self.ALU.mod(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+            self.data_path.acc = hex(self.ALU.value)
+        else:
+            self.data_path.dr = self.data_path.ram.read(int(self.data_path.cr["operand"], 16))
+            self.ALU.mod(int(self.data_path.acc, 16), int(self.data_path.dr, 16))
+            self.data_path.acc = hex(self.ALU.value)
+        return "MOD: ACC % DR => ACC"

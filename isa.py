@@ -26,6 +26,11 @@ class OpCode(Enum):
     NOP = Operation("nop", OpType.NARG)
     JMP = Operation("jmp", OpType.ARG)
     HLT = Operation("hlt", OpType.NARG)
+    ADD = Operation("add", OpType.ARG)
+    SUB = Operation("sub", OpType.ARG)
+    # DIV = Operation("div", OpType.ARG)
+    # MUL = Operation("mul", OpType.ARG)
+    MOD = Operation("mod", OpType.ARG)
 
     def get_type(self):
         return self.value.op_type
