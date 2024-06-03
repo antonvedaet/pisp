@@ -6,7 +6,7 @@ import json
 
 with open("pseudo_machine_code.json", "r") as file:
     mc = json.load(file)
-
+# ПЕРЕНЕСТИ В CONTROL UNIT
 ram = DataMemory(2048)
 rom = InstructionMemory()
 
@@ -21,14 +21,10 @@ for i in mc:
         rom.memory = instrcopy
 
 
-print(ram.memory)
-# print(rom.memory)
+# ПЕРЕНЕСТИ В CONTROL UNIT
 data_path = DataPath(rom, ram)
 control_unit = ControlUnit(data_path)
 
-control_unit.data_path.fetch_instruction()
-control_unit.do_load()
-control_unit.data_path.fetch_instruction()
-control_unit.do_store()
+control_unit.run()
 print(ram.memory)
-print(control_unit.data_path.acc)
+# print(rom.memory)

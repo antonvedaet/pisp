@@ -9,6 +9,8 @@ class DataPath:
         self.rom = rom
         self.ram = ram
     
+
+    # ЭТО ДЕЛАЕТСЯ В CONTROL UNIT'E
     def fetch_instruction(self):
         self.ar = self.ip
 
@@ -16,4 +18,5 @@ class DataPath:
 
         self.ip += 1
 
-    
+    def info(self):
+        return(f"AR: {self.ar} | IP: {self.ip} | DR: {self.dr} | ACC: {self.acc}")

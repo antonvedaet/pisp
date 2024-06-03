@@ -15,7 +15,7 @@
         "idx": "0x0",
         "opcode": "load",
         "operand": "0x2",
-        "address": true
+        "address": false
     },
     {
         "idx": "0x1",
@@ -37,20 +37,14 @@
     },
     {
         "idx": "0x4",
-        "opcode": "jmp",
-        "operand": "0x2",
+        "opcode": "load",
+        "operand": "0xf",
         "address": false
     },
     {
         "idx": "0x5",
-        "opcode": "jmp",
-        "operand": "0x3",
-        "address": false
-    },
-    {
-        "idx": "0x6",
         "opcode": "store",
         "operand": "0x145",
-        "address": false
+        "address": true
     }
 ]

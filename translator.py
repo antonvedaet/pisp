@@ -48,7 +48,7 @@ class Translator:
                         "idx": self.next_instr_address(),
                         "opcode": str(opcode),
                         "operand": hex(eval(self.labels[operand])),
-                        "address": False
+                        "address": True
                     }
                 if "&" not in operand:
                     if not operand.isdigit():
@@ -65,11 +65,18 @@ class Translator:
                             "operand": hex(eval(operand)),
                             "address": False
                         }
-                if "&" in operand:
+                if "&" in operand and operand[1:].isdigit():
                     return {
                         "idx": self.next_instr_address(),
                         "opcode": str(opcode),
                         "operand": hex(eval(operand[1::])),
+                        "address": True
+                    }
+                else:
+                    return {
+                        "idx": self.next_instr_address(),
+                        "opcode": str(opcode),
+                        "operand": self.vars[operand[1:]],
                         "address": True
                     }
 

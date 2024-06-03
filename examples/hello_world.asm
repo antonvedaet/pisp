@@ -1,15 +1,13 @@
 .data
     s: 15
     skibidi: 325
-    dota: "dota2"
 .code 
     begin:
         load 2
-        store &3  
+        store &6
         lbl:
             load &3
             load &4
-        jmp lbl
-        jmp 3
-        store skibidi
+        load s
+        store &skibidi
     end
