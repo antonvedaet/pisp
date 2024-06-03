@@ -1,11 +1,15 @@
+from ALU import ALU
+
 class DataPath:
 
     def __init__(self, rom, ram):
+        self.ALU = ALU()
         self.acc = 0
         self.cr = 0 #command register
         self.ar = 0 #address register
         self.ip = 0 #instruction pointer
         self.dr = 0 #data register
+        self.sr = self.ALU.flags() #status register
         self.rom = rom
         self.ram = ram
     
@@ -18,5 +22,10 @@ class DataPath:
 
         self.ip += 1
 
+    def alu_flags(self):
+        self.ALU.value = int(self.acc, 16)
+        self.ALU.refresh_flags()
+
     def info(self):
-        return(f"AR: {self.ar} | IP: {self.ip} | DR: {self.dr} | ACC: {self.acc}")
+        self.sr = self.ALU.flags()
+        return(f"AR: {self.ar} | IP: {self.ip} | DR: {self.dr} | ACC: {self.acc} | NZC: {self.sr}")

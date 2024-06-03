@@ -8,24 +8,26 @@ class ALU:
         self.value = 0
         #flags
         self.N = 0
-        self.Z = 0
+        self.Z = 1
         self.C = 0 #если при сдвиге бита направо становиться единичкой то число нечетное
     
     def refresh_flags(self):
-        if self.value == 0:
-            self.N = True
-        else:
-            self.N = False
-        
         if self.value > MAX_VALUE or self.value < MIN_VALUE:
-            self.C = True
-        else:
-            self.C = False
+            self.C = 1
+            self.value %= (MAX_VALUE + 1)
+        else:    
+            if self.value < 0:
+                self.N = 1
+            else:
+                self.N = 0
 
-        if self.value < 0:
-            self.Z = True
-        else:
-            self.Z = False
+            if self.value == 0:
+                self.Z = 1
+            else:
+                self.Z = 0
+
+    def flags(self):
+        return self.N * 100 + self.Z * 10 + self.C
 
     def add(self, a, b):
         self.value = a + b

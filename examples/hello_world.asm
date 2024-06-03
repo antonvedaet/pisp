@@ -3,9 +3,10 @@
     skibidi: 5
 .code 
     begin:
-        load 2
+        load 44
         store &25
-        add 52
+        add 44
+        sub 99
         mod 5
         store &26
         lbl:

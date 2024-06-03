@@ -51,7 +51,7 @@ class Translator:
                         "address": True
                     }
                 if "&" not in operand:
-                    if not operand.isdigit():
+                    if not operand.isdigit() and operand[0] != "-":
                         return {
                             "idx": self.next_instr_address(),
                             "opcode": str(opcode),
