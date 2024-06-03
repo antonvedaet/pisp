@@ -28,8 +28,6 @@ class OpCode(Enum):
     HLT = Operation("hlt", OpType.NARG)
     ADD = Operation("add", OpType.ARG)
     SUB = Operation("sub", OpType.ARG)
-    # DIV = Operation("div", OpType.ARG)
-    # MUL = Operation("mul", OpType.ARG)
     MOD = Operation("mod", OpType.ARG)
 
     def get_type(self):

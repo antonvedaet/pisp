@@ -6,7 +6,7 @@ class ALU:
 
     def __init__(self):
         self.value = 0
-        #refresh_flags
+        #flags
         self.N = 0
         self.Z = 0
         self.C = 0 #если при сдвиге бита направо становиться единичкой то число нечетное
@@ -33,14 +33,6 @@ class ALU:
     
     def sub(self, a, b):
         self.value = a - b
-        self.refresh_flags()
-
-    def div(self, a, b):
-        self.value = a / b
-        self.refresh_flags()
-
-    def mul(self, a, b):
-        self.value = a * b
         self.refresh_flags()
 
     def mod(self, a, b):

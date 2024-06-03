@@ -82,8 +82,15 @@ class Translator:
 
     def translate_data(self, data):
         for i in data:
-            self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(eval(i.split()[-1])), "address" : False})
-            self.vars[i.split(":")[0]] = hex(eval(i.split()[-1]))
+            if i.split()[-1].isdigit():
+                self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(eval(i.split()[-1])), "address" : False})
+                self.vars[i.split(":")[0]] = hex(eval(i.split()[-1]))
+            else:
+                self.vars[i.split(":")[0]] = hex(self.data_current_address + 1)
+                for j in i.split()[-1][1:-1:]: 
+                    self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(ord(j)), "address" : False})
+                self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(ord("@")), "address" : False})
+                
         return 
 
     def translate_code(self, code):

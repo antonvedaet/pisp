@@ -2,13 +2,37 @@
     {
         "idx": "0x2",
         "opcode": "nop",
-        "operand": "0xf",
+        "operand": "0x6e",
         "address": false
     },
     {
         "idx": "0x3",
         "opcode": "nop",
-        "operand": "0x145",
+        "operand": "0x69",
+        "address": false
+    },
+    {
+        "idx": "0x4",
+        "opcode": "nop",
+        "operand": "0x63",
+        "address": false
+    },
+    {
+        "idx": "0x5",
+        "opcode": "nop",
+        "operand": "0x65",
+        "address": false
+    },
+    {
+        "idx": "0x6",
+        "opcode": "nop",
+        "operand": "0x40",
+        "address": false
+    },
+    {
+        "idx": "0x7",
+        "opcode": "nop",
+        "operand": "0x5",
         "address": false
     },
     {
@@ -20,7 +44,7 @@
     {
         "idx": "0x1",
         "opcode": "store",
-        "operand": "0x6",
+        "operand": "0x19",
         "address": true
     },
     {
@@ -37,26 +61,26 @@
     },
     {
         "idx": "0x4",
-        "opcode": "load",
-        "operand": "0x3",
+        "opcode": "store",
+        "operand": "0x1a",
         "address": true
     },
     {
         "idx": "0x5",
         "opcode": "load",
-        "operand": "0x4",
+        "operand": "0x3",
         "address": true
     },
     {
         "idx": "0x6",
         "opcode": "load",
-        "operand": "0xf",
-        "address": false
+        "operand": "0x4",
+        "address": true
     },
     {
         "idx": "0x7",
-        "opcode": "store",
-        "operand": "0x145",
+        "opcode": "load",
+        "operand": "0x5",
         "address": true
     }
 ]
