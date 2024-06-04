@@ -1,5 +1,5 @@
-MIN_VALUE = -(2**32)
-MAX_VALUE = (2**32) - 1
+MIN_VALUE = -(1 << 32)
+MAX_VALUE = (1 << 32) - 1
 
 class ALU:
     
@@ -15,7 +15,8 @@ class ALU:
         if type(self.value)!=str:
             if self.value > MAX_VALUE or self.value < MIN_VALUE:
                 self.C = 1
-                self.value %= (MAX_VALUE + 1)
+                print(f"\n\n\n\n {self.value}\n\n\n\n")
+                self.value  =  self.value % (MAX_VALUE + 1)
             else:    
                 if self.value < 0:
                     self.N = 1
@@ -41,3 +42,14 @@ class ALU:
     def mod(self, a, b):
         self.value = a % b
         self.refresh_flags()
+
+    # def cmp(self, a, b):
+    #     self.sub()
+    
+    # def shiftr(self, a):
+    #     self.value = a >> 1
+    #     self.refresh_flags()
+    
+    # def shiftl(self, a):
+    #     self.value = a << 1
+    #     self.refresh_flags() 

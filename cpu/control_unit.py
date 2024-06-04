@@ -1,6 +1,7 @@
 from instruction_memory import InstructionMemory
 from data_memory import DataMemory
 from data_path import DataPath
+import sys
 
 class ControlUnit:
     
@@ -13,7 +14,12 @@ class ControlUnit:
             "store": self.do_store,
             "add": self.do_add,
             "sub": self.do_sub,
-            "mod": self.do_mod
+            "mod": self.do_mod,
+            "hlt": self.do_hlt,
+            # "shiftr": self.do_shiftr,
+            # "shiftl":  self.do_shiftl
+            "jifz": self.do_jifz,
+            "jifnz": self.do_jifnz
         }
     
     def run(self):
@@ -50,8 +56,8 @@ class ControlUnit:
     
     def do_jump(self):
         assert self.data_path.cr["address"] == True
-        self.data_path.ar = self.data_path.cr["operand"]
-        self.data_path.ip = self.data_path.ar
+        self.data_path.dr = self.data_path.cr["operand"]
+        self.data_path.ip = self.data_path.dr
         self.data_path.alu_flags()
         return "JUMP: AR => IP"
 
@@ -90,3 +96,31 @@ class ControlUnit:
             self.data_path.acc = self.data_path.ALU.value
         self.data_path.alu_flags()
         return "MOD: ACC % DR => ACC"
+
+    def do_hlt(self):
+        print("n: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info())
+        sys.exit()
+
+    # def do_shiftr(self):
+    #     self.data_path.ALU.shiftr(self.data_path.acc)
+    #     self.data_path.acc = self.data_path.ALU.value
+    #     self.data_path.alu_flags()
+    #     return "SHIFTR: ACC >> 1 => ACC"
+
+    # def do_shiftl(self):
+    #     self.data_path.ALU.shiftl(self.data_path.acc)
+    #     self.data_path.acc = self.data_path.ALU.value
+    #     self.data_path.alu_flags()
+    #     return "SHIFTL: ACC << 1 => ACC"
+
+    def do_jifz(self):
+        if(self.data_path.ALU.Z == 1):
+            self.data_path.dr = self.data_path.cr["operand"]
+            self.data_path.ip = self.data_path.dr
+        return "JIFZ: Z: DR => IP"
+
+    def do_jifnz(self):
+        if(self.data_path.ALU.Z != 1):
+            self.data_path.dr = self.data_path.cr["operand"]
+            self.data_path.ip = self.data_path.dr
+        return "JIFZ: Z: DR => IP"

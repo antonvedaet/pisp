@@ -3,6 +3,7 @@
     skibidi: 5
 .code 
     begin:
+        load 0 
         load 44
         store &25
         add 44
@@ -13,4 +14,10 @@
             load &3
             load &4
         load &5
+        load 11
+        store &27
+        store &28
+        load 2
+        sub 1
+        jifnz &14
     end

@@ -38,55 +38,97 @@
     {
         "idx": 0,
         "opcode": "load",
-        "operand": 44,
+        "operand": 0,
         "address": false
     },
     {
         "idx": 1,
+        "opcode": "load",
+        "operand": 44,
+        "address": false
+    },
+    {
+        "idx": 2,
         "opcode": "store",
         "operand": 25,
         "address": true
     },
     {
-        "idx": 2,
+        "idx": 3,
         "opcode": "add",
         "operand": 44,
         "address": false
     },
     {
-        "idx": 3,
+        "idx": 4,
         "opcode": "sub",
         "operand": 99,
         "address": false
     },
     {
-        "idx": 4,
+        "idx": 5,
         "opcode": "mod",
         "operand": 5,
         "address": false
     },
     {
-        "idx": 5,
+        "idx": 6,
         "opcode": "store",
         "operand": 26,
         "address": true
     },
     {
-        "idx": 6,
+        "idx": 7,
         "opcode": "load",
         "operand": 3,
         "address": true
     },
     {
-        "idx": 7,
+        "idx": 8,
         "opcode": "load",
         "operand": 4,
         "address": true
     },
     {
-        "idx": 8,
+        "idx": 9,
         "opcode": "load",
         "operand": 5,
+        "address": true
+    },
+    {
+        "idx": 10,
+        "opcode": "load",
+        "operand": 11,
+        "address": false
+    },
+    {
+        "idx": 11,
+        "opcode": "store",
+        "operand": 27,
+        "address": true
+    },
+    {
+        "idx": 12,
+        "opcode": "store",
+        "operand": 28,
+        "address": true
+    },
+    {
+        "idx": 13,
+        "opcode": "load",
+        "operand": 2,
+        "address": false
+    },
+    {
+        "idx": 14,
+        "opcode": "sub",
+        "operand": 1,
+        "address": false
+    },
+    {
+        "idx": 15,
+        "opcode": "jifnz",
+        "operand": 14,
         "address": true
     }
 ]

@@ -40,9 +40,20 @@ class Translator:
     
 
     def parse_instruction(self, line):
-        instruction, operand = line.split()
+        if len(line.split())>1:
+            print()
+            instruction, operand = line.split()
+        else:
+            instruction = line.split()[0]
         for opcode in OpCode:
-            if str(opcode) == instruction:
+            if str(opcode) == instruction and opcode.get_type() == OpType.NARG:
+                return {
+                        "idx": self.next_instr_address(),
+                        "opcode": str(opcode),
+                        "operand": None,
+                        "address": False
+                    }
+            if str(opcode) == instruction and opcode.get_type() == OpType.ARG:
                 if str(opcode) == "jmp" and operand in self.labels.keys():
                     return {
                         "idx": self.next_instr_address(),

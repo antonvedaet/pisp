@@ -6,8 +6,8 @@ IN = 0
 OUT = 1
 MIN_ADDRESS = 2
 MAX_ADDRESS = 2 ** 11 - 1
-MIN_VALUE = -(2**32)
-MAX_VALUE = (2**32) - 1
+MIN_VALUE = -(1 << 32)
+MAX_VALUE = (1 >> 32) - 1
 
 # INSTRUCTION
 MAX_INSTR_ADDRESS = 2 ** 11 - 1
@@ -29,6 +29,10 @@ class OpCode(Enum):
     ADD = Operation("add", OpType.ARG)
     SUB = Operation("sub", OpType.ARG)
     MOD = Operation("mod", OpType.ARG)
+    JIFZ = Operation("jifz", OpType.ARG)
+    JIFNZ = Operation("jifnz", OpType.ARG)
+    # SHIFTR = Operation("shiftr", OpType.NARG)
+    # SHIFTL = Operation("shiftl", OpType.NARG)
 
     def get_type(self):
         return self.value.op_type
