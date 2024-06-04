@@ -31,6 +31,8 @@ class OpCode(Enum):
     MOD = Operation("mod", OpType.ARG)
     JIFZ = Operation("jifz", OpType.ARG)
     JIFNZ = Operation("jifnz", OpType.ARG)
+    JIFN = Operation("jifn", OpType.ARG)
+    JIFNN = Operation("jifnn", OpType.ARG)
     # SHIFTR = Operation("shiftr", OpType.NARG)
     # SHIFTL = Operation("shiftl", OpType.NARG)
 

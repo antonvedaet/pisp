@@ -19,7 +19,9 @@ class ControlUnit:
             # "shiftr": self.do_shiftr,
             # "shiftl":  self.do_shiftl
             "jifz": self.do_jifz,
-            "jifnz": self.do_jifnz
+            "jifnz": self.do_jifnz,
+            "jifn": self.do_jifn,
+            "jifnn": self.do_jifnn
         }
     
     def run(self):
@@ -123,4 +125,16 @@ class ControlUnit:
         if(self.data_path.ALU.Z != 1):
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ip = self.data_path.dr
-        return "JIFZ: Z: DR => IP"
+        return "JIFNZ:NOT Z: DR => IP"
+
+    def do_jifn(self):
+        if(self.data_path.ALU.N != 1):
+            self.data_path.dr = self.data_path.cr["operand"]
+            self.data_path.ip = self.data_path.dr
+        return "JIFN:N: DR => IP"
+
+    def do_jifnn(self):
+        if(self.data_path.ALU.N != 1):
+            self.data_path.dr = self.data_path.cr["operand"]
+            self.data_path.ip = self.data_path.dr
+        return "JIFNN:NOT N: DR => IP"

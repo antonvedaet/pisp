@@ -1,6 +1,4 @@
 .data
-    wordtest: "nice"
-    skibidi: 5
 .code 
     begin:
         load 0 
@@ -19,5 +17,5 @@
         store &28
         load 2
         sub 1
-        jifnn &14
+        jifnz &14
     end
