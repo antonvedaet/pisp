@@ -33,7 +33,9 @@ class ControlUnit:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.acc = self.data_path.dr
         else:
-            self.data_path.dr = self.data_path.ram.read(int(self.data_path.cr["operand"], 16))
+            self.data_path.ar = self.data_path.cr["operand"]
+            self.data_path.dr = self.data_path.ar
+            self.data_path.dr = self.data_path.ram.read(int(self.data_path.dr, 16))
             self.data_path.acc = self.data_path.dr
         self.data_path.alu_flags()
         return "LOAD: DR => ACC"
@@ -42,7 +44,7 @@ class ControlUnit:
         assert self.data_path.cr["address"] == True
         self.data_path.ar = self.data_path.cr["operand"]
         self.data_path.dr = self.data_path.ar
-        self.data_path.ram.write(int(self.data_path.ar, 16), self.data_path.acc)
+        self.data_path.ram.write(int(self.data_path.dr, 16), self.data_path.acc)
         self.data_path.alu_flags()
         return "STORE: ACC => RAM[AR]"
     
