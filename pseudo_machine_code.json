@@ -1,92 +1,92 @@
 [
     {
-        "idx": "0x2",
+        "idx": 2,
         "opcode": "nop",
         "operand": "0x6e",
         "address": false
     },
     {
-        "idx": "0x3",
+        "idx": 3,
         "opcode": "nop",
         "operand": "0x69",
         "address": false
     },
     {
-        "idx": "0x4",
+        "idx": 4,
         "opcode": "nop",
         "operand": "0x63",
         "address": false
     },
     {
-        "idx": "0x5",
+        "idx": 5,
         "opcode": "nop",
         "operand": "0x65",
         "address": false
     },
     {
-        "idx": "0x6",
+        "idx": 6,
         "opcode": "nop",
         "operand": "0x40",
         "address": false
     },
     {
-        "idx": "0x7",
+        "idx": 7,
         "opcode": "nop",
-        "operand": "0x5",
+        "operand": 5,
         "address": false
     },
     {
-        "idx": "0x0",
+        "idx": 0,
         "opcode": "load",
-        "operand": "0x2c",
+        "operand": 44,
         "address": false
     },
     {
-        "idx": "0x1",
+        "idx": 1,
         "opcode": "store",
-        "operand": "0x19",
+        "operand": 25,
         "address": true
     },
     {
-        "idx": "0x2",
+        "idx": 2,
         "opcode": "add",
-        "operand": "0x2c",
+        "operand": 44,
         "address": false
     },
     {
-        "idx": "0x3",
+        "idx": 3,
         "opcode": "sub",
-        "operand": "0x63",
+        "operand": 99,
         "address": false
     },
     {
-        "idx": "0x4",
+        "idx": 4,
         "opcode": "mod",
-        "operand": "0x5",
+        "operand": 5,
         "address": false
     },
     {
-        "idx": "0x5",
+        "idx": 5,
         "opcode": "store",
-        "operand": "0x1a",
+        "operand": 26,
         "address": true
     },
     {
-        "idx": "0x6",
+        "idx": 6,
         "opcode": "load",
-        "operand": "0x3",
+        "operand": 3,
         "address": true
     },
     {
-        "idx": "0x7",
+        "idx": 7,
         "opcode": "load",
-        "operand": "0x4",
+        "operand": 4,
         "address": true
     },
     {
-        "idx": "0x8",
+        "idx": 8,
         "opcode": "load",
-        "operand": "0x5",
+        "operand": 5,
         "address": true
     }
 ]

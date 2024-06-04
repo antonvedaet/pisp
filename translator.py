@@ -13,11 +13,11 @@ class Translator:
         
     def next_instr_address(self):
         self.instr_current_address += 1
-        return hex((self.instr_current_address))
+        return (self.instr_current_address)
 
     def next_data_address(self):
         self.data_current_address += 1
-        return hex((self.data_current_address))
+        return (self.data_current_address)
     
     def sections(self, source):
         stripped_src = []
@@ -62,14 +62,14 @@ class Translator:
                         return {
                             "idx": self.next_instr_address(),
                             "opcode": str(opcode),
-                            "operand": hex(eval(operand)),
+                            "operand": eval(operand),
                             "address": False
                         }
                 if "&" in operand and operand[1:].isdigit():
                     return {
                         "idx": self.next_instr_address(),
                         "opcode": str(opcode),
-                        "operand": hex(eval(operand[1::])),
+                        "operand": eval(operand[1::]),
                         "address": True
                     }
                 else:
@@ -83,7 +83,7 @@ class Translator:
     def translate_data(self, data):
         for i in data:
             if i.split()[-1].isdigit():
-                self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(eval(i.split()[-1])), "address" : False})
+                self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : eval(i.split()[-1]), "address" : False})
                 self.vars[i.split(":")[0]] = hex(eval(i.split()[-1]))
             else:
                 self.vars[i.split(":")[0]] = hex(self.data_current_address + 1)

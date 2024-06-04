@@ -12,19 +12,20 @@ class ALU:
         self.C = 0 #если при сдвиге бита направо становиться единичкой то число нечетное
     
     def refresh_flags(self):
-        if self.value > MAX_VALUE or self.value < MIN_VALUE:
-            self.C = 1
-            self.value %= (MAX_VALUE + 1)
-        else:    
-            if self.value < 0:
-                self.N = 1
-            else:
-                self.N = 0
+        if type(self.value)!=str:
+            if self.value > MAX_VALUE or self.value < MIN_VALUE:
+                self.C = 1
+                self.value %= (MAX_VALUE + 1)
+            else:    
+                if self.value < 0:
+                    self.N = 1
+                else:
+                    self.N = 0
 
-            if self.value == 0:
-                self.Z = 1
-            else:
-                self.Z = 0
+                if self.value == 0:
+                    self.Z = 1
+                else:
+                    self.Z = 0
 
     def flags(self):
         return self.N * 100 + self.Z * 10 + self.C

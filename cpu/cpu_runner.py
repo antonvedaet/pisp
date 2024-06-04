@@ -15,7 +15,7 @@ instrcopy = mc.copy()
 
 for i in mc:
     if i["opcode"] == "nop":
-        ram.write(int(i["idx"], 16), i["operand"])
+        ram.write(i["idx"], i["operand"])
         instrcopy.remove(i)
     else:
         rom.memory = instrcopy

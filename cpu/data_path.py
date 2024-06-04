@@ -23,7 +23,7 @@ class DataPath:
         self.ip += 1
 
     def alu_flags(self):
-        self.ALU.value = int(self.acc, 16)
+        self.ALU.value = self.acc
         self.ALU.refresh_flags()
 
     def info(self):
