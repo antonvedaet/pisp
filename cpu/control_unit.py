@@ -107,7 +107,7 @@ class ControlUnit:
 
     def do_hlt(self):
         print("n: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info())
-        print(self.data_path.output)
+        print(f"output: {self.data_path.output}")
         sys.exit()
 
     # def do_shiftr(self):
