@@ -9,7 +9,7 @@ class Translator:
         self.instr_current_address = -1
         self.data_current_address = 1
         self.labels = {}
-        self.vars = {}
+        self.vars = {"in": {"val":0, "adr":0}, "out": {"val":0, "adr":1}}
         
     def next_instr_address(self):
         self.instr_current_address += 1

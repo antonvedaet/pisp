@@ -14,11 +14,13 @@
             load s
             store f
             mod 2
-            jifz &13
+            jifz &15
         limit:
             load s
             sub 4000000
             jifn mainloop
+            load r
+            store out
             hlt
         count:
             load r

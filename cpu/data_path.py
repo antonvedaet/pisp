@@ -10,6 +10,8 @@ class DataPath:
         self.ip = 0 #instruction pointer
         self.dr = 0 #data register
         self.sr = self.ALU.flags() #status register
+        self.output = []
+        self.input = []
         self.rom = rom
         self.ram = ram
     

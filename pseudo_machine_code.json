@@ -74,7 +74,7 @@
     {
         "idx": 8,
         "opcode": "jifz",
-        "operand": 13,
+        "operand": 15,
         "address": true
     },
     {
@@ -97,30 +97,42 @@
     },
     {
         "idx": 12,
-        "opcode": "hlt",
-        "operand": null,
-        "address": false
-    },
-    {
-        "idx": 13,
         "opcode": "load",
         "operand": 5,
         "address": true
     },
     {
-        "idx": 14,
-        "opcode": "add",
-        "operand": 3,
+        "idx": 13,
+        "opcode": "store",
+        "operand": 1,
         "address": true
     },
     {
+        "idx": 14,
+        "opcode": "hlt",
+        "operand": null,
+        "address": false
+    },
+    {
         "idx": 15,
-        "opcode": "store",
+        "opcode": "load",
         "operand": 5,
         "address": true
     },
     {
         "idx": 16,
+        "opcode": "add",
+        "operand": 3,
+        "address": true
+    },
+    {
+        "idx": 17,
+        "opcode": "store",
+        "operand": 5,
+        "address": true
+    },
+    {
+        "idx": 18,
         "opcode": "jmp",
         "operand": 9,
         "address": true

@@ -4,6 +4,9 @@ from data_path import DataPath
 import sys
 import time
 
+IN = 0
+OUT = 1
+
 class ControlUnit:
     
     def __init__(self, data_path):
@@ -53,9 +56,10 @@ class ControlUnit:
     def do_store(self):
         assert self.data_path.cr["address"] == True
         self.data_path.ar = self.data_path.cr["operand"]
-        self.data_path.dr = self.data_path.ar
-        self.data_path.ram.write(self.data_path.dr, self.data_path.acc)
+        self.data_path.ram.write(self.data_path.ar, self.data_path.acc)
         self.data_path.alu_flags()
+        if self.data_path.ar == OUT:
+            self.data_path.output.append(self.data_path.acc)
         return "STORE: ACC => RAM[AR]"
     
     def do_jump(self):
@@ -103,6 +107,7 @@ class ControlUnit:
 
     def do_hlt(self):
         print("n: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info())
+        print(self.data_path.output)
         sys.exit()
 
     # def do_shiftr(self):
