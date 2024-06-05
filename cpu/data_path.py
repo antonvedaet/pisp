@@ -11,12 +11,10 @@ class DataPath:
         self.dr = 0 #data register
         self.sr = self.ALU.flags() #status register
         self.output = []
-        self.input = []
+        self.input = list(input())
         self.rom = rom
         self.ram = ram
     
-
-    # ЭТО ДЕЛАЕТСЯ В CONTROL UNIT'E
     def fetch_instruction(self):
         self.ar = self.ip
 

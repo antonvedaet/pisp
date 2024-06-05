@@ -84,13 +84,20 @@ class Translator:
                         "address": True
                     }
                 else:
-                    print(opcode.get_type())
-                    return {
-                        "idx": self.next_instr_address(),
-                        "opcode": str(opcode),
-                        "operand": self.labels[operand],
-                        "address": True
-                    }
+                    try:
+                        return {
+                            "idx": self.next_instr_address(),
+                            "opcode": str(opcode),
+                            "operand": self.labels[operand],
+                            "address": True
+                        }
+                    except KeyError:
+                        return {
+                            "idx": self.next_instr_address(),
+                            "opcode": str(opcode),
+                            "operand": self.vars[operand[1:]]["adr"],
+                            "address": True
+                        }
 
     def translate_data(self, data):
         for i in data:
@@ -98,8 +105,8 @@ class Translator:
                 self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : eval(i.split()[-1]), "address" : False})
                 self.vars[i.split(":")[0]] = {"val":eval(i.split()[-1]), "adr":self.data_current_address}
             else:
-                self.vars[i.split(":")[0]] = self.data_current_address + 1
-                for j in i.split()[-1][1:-1:]: 
+                self.vars[i.split(":")[0]] = {"val":0, "adr":self.data_current_address + 1}
+                for j in " ".join(i.split()[1:])[1:-1:]: 
                     self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(ord(j)), "address" : False})
                 self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : "\0", "address" : False})
                 

@@ -2,139 +2,139 @@
     {
         "idx": 2,
         "opcode": "nop",
-        "operand": 1,
+        "operand": "0x48",
         "address": false
     },
     {
         "idx": 3,
         "opcode": "nop",
-        "operand": 2,
+        "operand": "0x65",
         "address": false
     },
     {
         "idx": 4,
         "opcode": "nop",
-        "operand": 2,
+        "operand": "0x6c",
         "address": false
     },
     {
         "idx": 5,
         "opcode": "nop",
-        "operand": 0,
+        "operand": "0x6c",
+        "address": false
+    },
+    {
+        "idx": 6,
+        "opcode": "nop",
+        "operand": "0x6f",
+        "address": false
+    },
+    {
+        "idx": 7,
+        "opcode": "nop",
+        "operand": "0x2c",
+        "address": false
+    },
+    {
+        "idx": 8,
+        "opcode": "nop",
+        "operand": "0x20",
+        "address": false
+    },
+    {
+        "idx": 9,
+        "opcode": "nop",
+        "operand": "0x77",
+        "address": false
+    },
+    {
+        "idx": 10,
+        "opcode": "nop",
+        "operand": "0x6f",
+        "address": false
+    },
+    {
+        "idx": 11,
+        "opcode": "nop",
+        "operand": "0x72",
+        "address": false
+    },
+    {
+        "idx": 12,
+        "opcode": "nop",
+        "operand": "0x6c",
+        "address": false
+    },
+    {
+        "idx": 13,
+        "opcode": "nop",
+        "operand": "0x64",
+        "address": false
+    },
+    {
+        "idx": 14,
+        "opcode": "nop",
+        "operand": "0x21",
+        "address": false
+    },
+    {
+        "idx": 15,
+        "opcode": "nop",
+        "operand": "\u0000",
+        "address": false
+    },
+    {
+        "idx": 16,
+        "opcode": "nop",
+        "operand": 2,
         "address": false
     },
     {
         "idx": 0,
         "opcode": "load",
-        "operand": 4,
+        "operand": 2,
         "address": true
     },
     {
         "idx": 1,
         "opcode": "store",
-        "operand": 3,
+        "operand": 1,
         "address": true
     },
     {
         "idx": 2,
         "opcode": "load",
-        "operand": 2,
+        "operand": 16,
         "address": true
     },
     {
         "idx": 3,
         "opcode": "add",
-        "operand": 3,
-        "address": true
+        "operand": 1,
+        "address": false
     },
     {
         "idx": 4,
         "opcode": "store",
-        "operand": 4,
+        "operand": 16,
         "address": true
     },
     {
         "idx": 5,
         "opcode": "load",
-        "operand": 3,
+        "operand": 16,
         "address": true
     },
     {
         "idx": 6,
-        "opcode": "store",
-        "operand": 2,
-        "address": true
-    },
-    {
-        "idx": 7,
-        "opcode": "mod",
-        "operand": 2,
-        "address": false
-    },
-    {
-        "idx": 8,
-        "opcode": "jifz",
-        "operand": 15,
-        "address": true
-    },
-    {
-        "idx": 9,
-        "opcode": "load",
-        "operand": 3,
-        "address": true
-    },
-    {
-        "idx": 10,
-        "opcode": "sub",
-        "operand": 4000000,
-        "address": false
-    },
-    {
-        "idx": 11,
-        "opcode": "jifn",
-        "operand": 0,
-        "address": true
-    },
-    {
-        "idx": 12,
-        "opcode": "load",
-        "operand": 5,
-        "address": true
-    },
-    {
-        "idx": 13,
-        "opcode": "store",
+        "opcode": "jifnz",
         "operand": 1,
         "address": true
     },
     {
-        "idx": 14,
+        "idx": 7,
         "opcode": "hlt",
         "operand": null,
         "address": false
-    },
-    {
-        "idx": 15,
-        "opcode": "load",
-        "operand": 5,
-        "address": true
-    },
-    {
-        "idx": 16,
-        "opcode": "add",
-        "operand": 3,
-        "address": true
-    },
-    {
-        "idx": 17,
-        "opcode": "store",
-        "operand": 5,
-        "address": true
-    },
-    {
-        "idx": 18,
-        "opcode": "jmp",
-        "operand": 9,
-        "address": true
     }
 ]

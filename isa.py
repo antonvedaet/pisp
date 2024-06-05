@@ -34,8 +34,6 @@ class OpCode(Enum):
     JIFNZ = Operation("jifnz", OpType.JUMP)
     JIFN = Operation("jifn", OpType.JUMP)
     JIFNN = Operation("jifnn", OpType.JUMP)
-    # SHIFTR = Operation("shiftr", OpType.NARG)
-    # SHIFTL = Operation("shiftl", OpType.NARG)
 
     def get_type(self):
         return self.value.op_type

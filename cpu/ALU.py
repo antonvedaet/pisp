@@ -12,10 +12,13 @@ class ALU:
         self.C = 0 #если при сдвиге бита направо становиться единичкой то число нечетное
     
     def refresh_flags(self):
-        if type(self.value)!=str:
+        if type(self.value) == str and self.value == "\u0000":
+            self.N = 0
+            self.Z = 1
+            self.C = 0
+        if type(self.value) != str:
             if self.value > MAX_VALUE or self.value < MIN_VALUE:
                 self.C = 1
-                print(f"\n\n\n\n {self.value}\n\n\n\n")
                 self.value  =  self.value % (MAX_VALUE + 1)
             else:    
                 if self.value < 0:
@@ -42,14 +45,3 @@ class ALU:
     def mod(self, a, b):
         self.value = a % b
         self.refresh_flags()
-
-    # def cmp(self, a, b):
-    #     self.sub()
-    
-    # def shiftr(self, a):
-    #     self.value = a >> 1
-    #     self.refresh_flags()
-    
-    # def shiftl(self, a):
-    #     self.value = a << 1
-    #     self.refresh_flags() 

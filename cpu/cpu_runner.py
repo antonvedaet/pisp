@@ -5,26 +5,18 @@ from data_path import DataPath
 import json
 
 with open("pseudo_machine_code.json", "r") as file:
-    mc = json.load(file)
-# ПЕРЕНЕСТИ В CONTROL UNIT
+    memory = json.load(file)
 ram = DataMemory(2048)
 rom = InstructionMemory()
-
-
-instrcopy = mc.copy()
-
-for i in mc:
+instrcopy = memory.copy()
+for i in memory:
     if i["opcode"] == "nop":
         ram.write(i["idx"], i["operand"])
         instrcopy.remove(i)
     else:
         rom.memory = instrcopy
 
-
-# ПЕРЕНЕСТИ В CONTROL UNIT
 data_path = DataPath(rom, ram)
 control_unit = ControlUnit(data_path)
 
 control_unit.run()
-print(ram.memory)
-# print(rom.memory)
