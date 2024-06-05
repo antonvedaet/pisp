@@ -51,7 +51,8 @@ class Translator:
                         "idx": self.next_instr_address(),
                         "opcode": str(opcode),
                         "operand": None,
-                        "address": False
+                        "address": False,
+                        "relative": False
                     }
             if str(opcode) == instruction and (opcode.get_type() == OpType.ARG or opcode.get_type() == OpType.JUMP):
                 if str(opcode) == instruction and opcode.get_type() == OpType.JUMP and operand in self.labels.keys():
@@ -59,7 +60,8 @@ class Translator:
                         "idx": self.next_instr_address(),
                         "opcode": str(opcode),
                         "operand": eval(self.labels[operand]),
-                        "address": True
+                        "address": True,
+                        "relative": False
                     }
                 if "&" not in operand and str(opcode) == instruction:
                     if not operand.isdigit() and operand[0] != "-":
@@ -67,21 +69,24 @@ class Translator:
                             "idx": self.next_instr_address(),
                             "opcode": str(opcode),
                             "operand": self.vars[operand]["adr"],
-                            "address": True
+                            "address": True,
+                            "relative": False
                         }
                     else:    
                         return {
                             "idx": self.next_instr_address(),
                             "opcode": str(opcode),
                             "operand": eval(operand),
-                            "address": False
+                            "address": False,
+                            "relative": False
                         }
                 if "&" in operand and operand[1:].isdigit():
                     return {
                         "idx": self.next_instr_address(),
                         "opcode": str(opcode),
                         "operand": eval(operand[1::]),
-                        "address": True
+                        "address": True,
+                        "relative": False
                     }
                 else:
                     try:
@@ -89,14 +94,16 @@ class Translator:
                             "idx": self.next_instr_address(),
                             "opcode": str(opcode),
                             "operand": self.labels[operand],
-                            "address": True
+                            "address": True,
+                            "relative": False
                         }
                     except KeyError:
                         return {
                             "idx": self.next_instr_address(),
                             "opcode": str(opcode),
                             "operand": self.vars[operand[1:]]["adr"],
-                            "address": True
+                            "address": True,
+                            "relative": True
                         }
 
     def translate_data(self, data):

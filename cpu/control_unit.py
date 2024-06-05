@@ -34,6 +34,7 @@ class ControlUnit:
                 self.ic += 1
                 if self.data_path.cr["opcode"] in self.operations:
                     print("INSTRUCTION: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info() + " | TICK: " + str(self.ticks))
+                    print(self.data_path.ram.memory[:20])
             except IndexError as _:
                 print("------------------------------------------------------------------------------------------------------------\n")
                 print("Finished")
@@ -49,9 +50,15 @@ class ControlUnit:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.acc = self.data_path.dr
         else:
-            self.data_path.dr = self.data_path.ar
-            self.data_path.dr = self.data_path.ram.read(self.data_path.dr)
-            self.data_path.acc = self.data_path.dr
+            if self.data_path.cr["relative"] == False:
+                self.data_path.dr = self.data_path.ar
+                self.data_path.dr = self.data_path.ram.read(self.data_path.dr)
+                self.data_path.acc = self.data_path.dr
+            else:
+                self.data_path.dr = self.data_path.ar
+                self.data_path.dr = self.data_path.ram.read(self.data_path.dr)
+                self.data_path.dr = self.data_path.ram.read(self.data_path.dr)
+                self.data_path.acc = self.data_path.dr
         self.data_path.alu_flags()
         self.ticks += 3
         return "LOAD: DR => ACC"
@@ -117,7 +124,7 @@ class ControlUnit:
     def do_hlt(self):
         self.ticks += 1
         print("INSTRUCTION: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info() + " | TICK: " + str(self.ticks))
-        print(f"output: {self.data_path.output}")
+        print(f"output: {[chr(int(i,16)) if type(i) == str  else i for i in self.data_path.output]}")
         sys.exit()
 
     def do_jifz(self):

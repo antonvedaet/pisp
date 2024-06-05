@@ -93,48 +93,56 @@
         "idx": 0,
         "opcode": "load",
         "operand": 2,
-        "address": true
+        "address": true,
+        "relative": false
     },
     {
         "idx": 1,
         "opcode": "store",
         "operand": 1,
-        "address": true
+        "address": true,
+        "relative": false
     },
     {
         "idx": 2,
         "opcode": "load",
         "operand": 16,
-        "address": true
+        "address": true,
+        "relative": false
     },
     {
         "idx": 3,
         "opcode": "add",
         "operand": 1,
-        "address": false
+        "address": false,
+        "relative": false
     },
     {
         "idx": 4,
         "opcode": "store",
         "operand": 16,
-        "address": true
-    },
-    {
-        "idx": 5,
-        "opcode": "load",
-        "operand": 16,
-        "address": true
+        "address": true,
+        "relative": false
     },
     {
         "idx": 6,
-        "opcode": "jifnz",
-        "operand": 1,
-        "address": true
+        "opcode": "load",
+        "operand": 16,
+        "address": true,
+        "relative": true
     },
     {
         "idx": 7,
+        "opcode": "jifnz",
+        "operand": 1,
+        "address": true,
+        "relative": false
+    },
+    {
+        "idx": 8,
         "opcode": "hlt",
         "operand": null,
-        "address": false
+        "address": false,
+        "relative": false
     }
 ]
