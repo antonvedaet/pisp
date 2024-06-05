@@ -16,6 +16,8 @@ class ALU:
             self.N = 0
             self.Z = 1
             self.C = 0
+        if type(self.value) == str:
+            self.value = ord(self.value)
         if type(self.value) != str:
             if self.value > MAX_VALUE or self.value < MIN_VALUE:
                 self.C = 1

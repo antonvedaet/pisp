@@ -2,79 +2,79 @@
     {
         "idx": 2,
         "opcode": "nop",
-        "operand": "0x48",
+        "operand": "H",
         "address": false
     },
     {
         "idx": 3,
         "opcode": "nop",
-        "operand": "0x65",
+        "operand": "e",
         "address": false
     },
     {
         "idx": 4,
         "opcode": "nop",
-        "operand": "0x6c",
+        "operand": "l",
         "address": false
     },
     {
         "idx": 5,
         "opcode": "nop",
-        "operand": "0x6c",
+        "operand": "l",
         "address": false
     },
     {
         "idx": 6,
         "opcode": "nop",
-        "operand": "0x6f",
+        "operand": "o",
         "address": false
     },
     {
         "idx": 7,
         "opcode": "nop",
-        "operand": "0x2c",
+        "operand": ",",
         "address": false
     },
     {
         "idx": 8,
         "opcode": "nop",
-        "operand": "0x20",
+        "operand": " ",
         "address": false
     },
     {
         "idx": 9,
         "opcode": "nop",
-        "operand": "0x77",
+        "operand": "w",
         "address": false
     },
     {
         "idx": 10,
         "opcode": "nop",
-        "operand": "0x6f",
+        "operand": "o",
         "address": false
     },
     {
         "idx": 11,
         "opcode": "nop",
-        "operand": "0x72",
+        "operand": "r",
         "address": false
     },
     {
         "idx": 12,
         "opcode": "nop",
-        "operand": "0x6c",
+        "operand": "l",
         "address": false
     },
     {
         "idx": 13,
         "opcode": "nop",
-        "operand": "0x64",
+        "operand": "d",
         "address": false
     },
     {
         "idx": 14,
         "opcode": "nop",
-        "operand": "0x21",
+        "operand": "!",
         "address": false
     },
     {

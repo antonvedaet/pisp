@@ -1,6 +1,8 @@
 from instruction_memory import InstructionMemory
 from data_memory import DataMemory
 from data_path import DataPath
+import utils.ioutils
+
 import sys
 import time
 
@@ -26,18 +28,17 @@ class ControlUnit:
             "jifn": self.do_jifn,
             "jifnn": self.do_jifnn
         }
+        self.log = ""
     
     def run(self):
+        print("Input:" + str(self.data_path.input))
         while True:
             try:
                 self.data_path.fetch_instruction()
                 self.ic += 1
                 if self.data_path.cr["opcode"] in self.operations:
-                    print("INSTRUCTION: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info() + " | TICK: " + str(self.ticks))
-                    print(self.data_path.ram.memory[:20])
+                    self.log += ("INSTRUCTION: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "\n")
             except IndexError as _:
-                print("------------------------------------------------------------------------------------------------------------\n")
-                print("Finished")
                 break
 
     def do_load(self):
@@ -123,8 +124,12 @@ class ControlUnit:
 
     def do_hlt(self):
         self.ticks += 1
-        print("INSTRUCTION: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info() + " | TICK: " + str(self.ticks))
-        print(f"output: {[chr(int(i,16)) if type(i) == str  else i for i in self.data_path.output]}")
+        self.log += ("INSTRUCTION: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "\n")
+        print(self.log)
+        utils.ioutils.write_output(self.log, "io/cpu.log")
+        print(self.data_path.output)
+        utils.ioutils.write_output(str(self.data_path.output))
+        time.sleep(2)
         sys.exit()
 
     def do_jifz(self):

@@ -114,7 +114,7 @@ class Translator:
             else:
                 self.vars[i.split(":")[0]] = {"val":0, "adr":self.data_current_address + 1}
                 for j in " ".join(i.split()[1:])[1:-1:]: 
-                    self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(ord(j)), "address" : False})
+                    self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : (j), "address" : False})
                 self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : "\0", "address" : False})
                 
         return 
