@@ -53,15 +53,15 @@ class Translator:
                         "operand": None,
                         "address": False
                     }
-            if str(opcode) == instruction and opcode.get_type() == OpType.ARG or opcode.get_type() == OpType.JUMP:
-                if opcode.get_type() == OpType.JUMP and operand in self.labels.keys():
+            if str(opcode) == instruction and (opcode.get_type() == OpType.ARG or opcode.get_type() == OpType.JUMP):
+                if str(opcode) == instruction and opcode.get_type() == OpType.JUMP and operand in self.labels.keys():
                     return {
                         "idx": self.next_instr_address(),
                         "opcode": str(opcode),
                         "operand": eval(self.labels[operand]),
                         "address": True
                     }
-                if "&" not in operand:
+                if "&" not in operand and str(opcode) == instruction:
                     if not operand.isdigit() and operand[0] != "-":
                         return {
                             "idx": self.next_instr_address(),
@@ -83,13 +83,14 @@ class Translator:
                         "operand": eval(operand[1::]),
                         "address": True
                     }
-                else:
-                    return {
-                        "idx": self.next_instr_address(),
-                        "opcode": str(opcode),
-                        "operand": self.vars[operand[1:]],
-                        "address": True
-                    }
+                # else:
+                #     print(opcode.get_type())
+                #     return {
+                #         "idx": self.next_instr_address(),
+                #         "opcode": str(opcode),
+                #         "operand": self.labels[operand],
+                #         "address": True
+                #     }
 
     def translate_data(self, data):
         for i in data:
@@ -100,7 +101,7 @@ class Translator:
                 self.vars[i.split(":")[0]] = self.data_current_address + 1
                 for j in i.split()[-1][1:-1:]: 
                     self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(ord(j)), "address" : False})
-                self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(ord("@")), "address" : False})
+                self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : "\0", "address" : False})
                 
         return 
 
