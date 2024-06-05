@@ -69,7 +69,7 @@ class ControlUnit:
         self.data_path.ar = self.data_path.cr["operand"]
         self.data_path.ram.write(self.data_path.ar, self.data_path.acc)
         self.data_path.alu_flags()
-        if self.data_path.ar == OUT:
+        if self.data_path.ar == OUT and self.data_path.acc!="\u0000":
             self.data_path.output.append(self.data_path.acc)
         self.ticks += 2
         return "STORE: ACC => RAM[AR]"
@@ -129,7 +129,6 @@ class ControlUnit:
         utils.ioutils.write_output(self.log, "io/cpu.log")
         print(self.data_path.output)
         utils.ioutils.write_output(str(self.data_path.output))
-        time.sleep(2)
         sys.exit()
 
     def do_jifz(self):
