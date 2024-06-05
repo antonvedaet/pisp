@@ -2,6 +2,7 @@ from instruction_memory import InstructionMemory
 from data_memory import DataMemory
 from data_path import DataPath
 import sys
+import time
 
 class ControlUnit:
     
@@ -31,6 +32,7 @@ class ControlUnit:
                 self.ic += 1
                 if self.data_path.cr["opcode"] in self.operations:
                     print("n: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info())
+                    print(self.data_path.ram.memory[0:5])
             except IndexError as _:
                 print("------------------------------------------------------------------------------------------\n")
                 print("Finished")
@@ -128,7 +130,7 @@ class ControlUnit:
         return "JIFNZ:NOT Z: DR => IP"
 
     def do_jifn(self):
-        if(self.data_path.ALU.N != 1):
+        if(self.data_path.ALU.N == 1):
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ip = self.data_path.dr
         return "JIFN:N: DR => IP"

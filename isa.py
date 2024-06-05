@@ -15,6 +15,7 @@ MAX_INSTR_ADDRESS = 2 ** 11 - 1
 class OpType(Enum):
     ARG = "arg"
     NARG = "narg"
+    JUMP = "jump"
 
 class Operation(NamedTuple):
     opcode: str
@@ -29,10 +30,10 @@ class OpCode(Enum):
     ADD = Operation("add", OpType.ARG)
     SUB = Operation("sub", OpType.ARG)
     MOD = Operation("mod", OpType.ARG)
-    JIFZ = Operation("jifz", OpType.ARG)
-    JIFNZ = Operation("jifnz", OpType.ARG)
-    JIFN = Operation("jifn", OpType.ARG)
-    JIFNN = Operation("jifnn", OpType.ARG)
+    JIFZ = Operation("jifz", OpType.JUMP)
+    JIFNZ = Operation("jifnz", OpType.JUMP)
+    JIFN = Operation("jifn", OpType.JUMP)
+    JIFNN = Operation("jifnn", OpType.JUMP)
     # SHIFTR = Operation("shiftr", OpType.NARG)
     # SHIFTL = Operation("shiftl", OpType.NARG)
 

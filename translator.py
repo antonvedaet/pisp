@@ -53,12 +53,12 @@ class Translator:
                         "operand": None,
                         "address": False
                     }
-            if str(opcode) == instruction and opcode.get_type() == OpType.ARG:
-                if str(opcode) == "jmp" and operand in self.labels.keys():
+            if str(opcode) == instruction and opcode.get_type() == OpType.ARG or opcode.get_type() == OpType.JUMP:
+                if opcode.get_type() == OpType.JUMP and operand in self.labels.keys():
                     return {
                         "idx": self.next_instr_address(),
                         "opcode": str(opcode),
-                        "operand": hex(eval(self.labels[operand])),
+                        "operand": eval(self.labels[operand]),
                         "address": True
                     }
                 if "&" not in operand:
@@ -66,8 +66,8 @@ class Translator:
                         return {
                             "idx": self.next_instr_address(),
                             "opcode": str(opcode),
-                            "operand": self.vars[operand],
-                            "address": False
+                            "operand": self.vars[operand]["adr"],
+                            "address": True
                         }
                     else:    
                         return {
@@ -95,9 +95,9 @@ class Translator:
         for i in data:
             if i.split()[-1].isdigit():
                 self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : eval(i.split()[-1]), "address" : False})
-                self.vars[i.split(":")[0]] = hex(eval(i.split()[-1]))
+                self.vars[i.split(":")[0]] = {"val":eval(i.split()[-1]), "adr":self.data_current_address}
             else:
-                self.vars[i.split(":")[0]] = hex(self.data_current_address + 1)
+                self.vars[i.split(":")[0]] = self.data_current_address + 1
                 for j in i.split()[-1][1:-1:]: 
                     self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(ord(j)), "address" : False})
                 self.instructions.append({"idx" : self.next_data_address(),"opcode" : OpCode.NOP.value[0], "operand" : hex(ord("@")), "address" : False})
@@ -105,6 +105,7 @@ class Translator:
         return 
 
     def translate_code(self, code):
+    
         for line in code:
             if line == "begin:":
                 continue

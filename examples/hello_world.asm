@@ -15,7 +15,7 @@
             load &4
         load &5
         load 11
-        store &27
+        store &7
         store &28
         load 2
         sub 1
