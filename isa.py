@@ -25,7 +25,7 @@ class OpCode(Enum):
     LOAD = Operation("load", OpType.ARG)
     STORE = Operation("store", OpType.ARG)
     NOP = Operation("nop", OpType.NARG)
-    JMP = Operation("jmp", OpType.ARG)
+    JMP = Operation("jmp", OpType.JUMP)
     HLT = Operation("hlt", OpType.NARG)
     ADD = Operation("add", OpType.ARG)
     SUB = Operation("sub", OpType.ARG)

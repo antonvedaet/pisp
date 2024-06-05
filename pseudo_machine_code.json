@@ -2,133 +2,127 @@
     {
         "idx": 2,
         "opcode": "nop",
-        "operand": "0x6e",
+        "operand": 1,
         "address": false
     },
     {
         "idx": 3,
         "opcode": "nop",
-        "operand": "0x69",
+        "operand": 2,
         "address": false
     },
     {
         "idx": 4,
         "opcode": "nop",
-        "operand": "0x63",
+        "operand": 2,
         "address": false
     },
     {
         "idx": 5,
         "opcode": "nop",
-        "operand": "0x65",
-        "address": false
-    },
-    {
-        "idx": 6,
-        "opcode": "nop",
-        "operand": "\u0000",
-        "address": false
-    },
-    {
-        "idx": 7,
-        "opcode": "nop",
-        "operand": 5,
+        "operand": 0,
         "address": false
     },
     {
         "idx": 0,
         "opcode": "load",
-        "operand": 0,
-        "address": false
+        "operand": 4,
+        "address": true
     },
     {
         "idx": 1,
-        "opcode": "load",
-        "operand": 44,
-        "address": false
+        "opcode": "store",
+        "operand": 3,
+        "address": true
     },
     {
         "idx": 2,
-        "opcode": "store",
-        "operand": 25,
+        "opcode": "load",
+        "operand": 2,
         "address": true
     },
     {
         "idx": 3,
         "opcode": "add",
-        "operand": 44,
-        "address": false
-    },
-    {
-        "idx": 4,
-        "opcode": "sub",
-        "operand": 99,
-        "address": false
-    },
-    {
-        "idx": 5,
-        "opcode": "mod",
-        "operand": 5,
-        "address": false
-    },
-    {
-        "idx": 6,
-        "opcode": "store",
-        "operand": 26,
+        "operand": 3,
         "address": true
     },
     {
-        "idx": 7,
+        "idx": 4,
+        "opcode": "store",
+        "operand": 4,
+        "address": true
+    },
+    {
+        "idx": 5,
         "opcode": "load",
         "operand": 3,
         "address": true
     },
     {
+        "idx": 6,
+        "opcode": "store",
+        "operand": 2,
+        "address": true
+    },
+    {
+        "idx": 7,
+        "opcode": "mod",
+        "operand": 2,
+        "address": false
+    },
+    {
         "idx": 8,
-        "opcode": "load",
-        "operand": 4,
+        "opcode": "jifz",
+        "operand": 13,
         "address": true
     },
     {
         "idx": 9,
         "opcode": "load",
-        "operand": 5,
+        "operand": 3,
         "address": true
     },
     {
         "idx": 10,
-        "opcode": "load",
-        "operand": 11,
+        "opcode": "sub",
+        "operand": 4000000,
         "address": false
     },
     {
         "idx": 11,
-        "opcode": "store",
-        "operand": 7,
+        "opcode": "jifn",
+        "operand": 0,
         "address": true
     },
     {
         "idx": 12,
-        "opcode": "store",
-        "operand": 28,
-        "address": true
+        "opcode": "hlt",
+        "operand": null,
+        "address": false
     },
     {
         "idx": 13,
         "opcode": "load",
-        "operand": 2,
-        "address": false
+        "operand": 5,
+        "address": true
     },
     {
         "idx": 14,
-        "opcode": "sub",
-        "operand": 1,
-        "address": false
+        "opcode": "add",
+        "operand": 3,
+        "address": true
     },
     {
         "idx": 15,
-        "opcode": "jifnn",
-        "operand": 14,
+        "opcode": "store",
+        "operand": 5,
+        "address": true
+    },
+    {
+        "idx": 16,
+        "opcode": "jmp",
+        "operand": 9,
         "address": true
     }
 ]

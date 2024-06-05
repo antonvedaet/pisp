@@ -83,14 +83,14 @@ class Translator:
                         "operand": eval(operand[1::]),
                         "address": True
                     }
-                # else:
-                #     print(opcode.get_type())
-                #     return {
-                #         "idx": self.next_instr_address(),
-                #         "opcode": str(opcode),
-                #         "operand": self.labels[operand],
-                #         "address": True
-                #     }
+                else:
+                    print(opcode.get_type())
+                    return {
+                        "idx": self.next_instr_address(),
+                        "opcode": str(opcode),
+                        "operand": self.labels[operand],
+                        "address": True
+                    }
 
     def translate_data(self, data):
         for i in data:

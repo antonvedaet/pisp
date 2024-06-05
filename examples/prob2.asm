@@ -1,12 +1,28 @@
 .data
-    f: 0
+    f: 1
     s: 2
+    nxt: 2
+    r: 0
 .code 
     begin:
-        load s
-        toilet:
-            add 52
+        mainloop:
+            load nxt
+            store s
+            load f
+            add s
+            store nxt
+            load s
             store f
-            sub 53
-        jifnz toilet 
+            mod 2
+            jifz &13
+        limit:
+            load s
+            sub 4000000
+            jifn mainloop
+            hlt
+        count:
+            load r
+            add s
+            store r
+            jmp limit
     end

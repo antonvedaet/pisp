@@ -32,7 +32,7 @@ class ControlUnit:
                 self.ic += 1
                 if self.data_path.cr["opcode"] in self.operations:
                     print("n: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info())
-                    print(self.data_path.ram.memory[0:5])
+                    print(self.data_path.ram.memory[0:7])
             except IndexError as _:
                 print("------------------------------------------------------------------------------------------\n")
                 print("Finished")
