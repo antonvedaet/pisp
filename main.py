@@ -1,6 +1,6 @@
 from translator import Translator
 
-with open("./examples/cat.asm", "r") as f:
+with open("./examples/hello_username.asm", "r") as f:
     file = f.readlines()
 
 tr = Translator()
