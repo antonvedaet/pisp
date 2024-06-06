@@ -1,0 +1,83 @@
+in_src: |-
+  .data
+  .code 
+      begin:
+          load in
+          store out
+          jifnz &0
+          hlt
+      end
+
+in_input: |-
+  ['C', 'a', 't', ')', ')']
+
+out_src: |-
+  [
+    {
+        "idx": 0,
+        "opcode": "load",
+        "operand": 0,
+        "address": true,
+        "relative": false
+    },
+    {
+        "idx": 1,
+        "opcode": "store",
+        "operand": 1,
+        "address": true,
+        "relative": false
+    },
+    {
+        "idx": 2,
+        "opcode": "jifnz",
+        "operand": 0,
+        "address": true,
+        "relative": false
+    },
+    {
+        "idx": 3,
+        "opcode": "hlt",
+        "operand": null,
+        "address": false,
+        "relative": false
+    }
+  ]
+
+out_log: |
+  INFO INSTRUCTION: 1 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: A | ACC: A | NZC: 0 | TICK: 3| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 2 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: A | ACC: A | NZC: 0 | TICK: 5| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 3 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: A | NZC: 0 | TICK: 8| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 4 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: n | ACC: n | NZC: 0 | TICK: 11| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 5 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: n | ACC: n | NZC: 0 | TICK: 13| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 6 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: n | NZC: 0 | TICK: 16| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 7 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: t | ACC: t | NZC: 0 | TICK: 19| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 8 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: t | ACC: t | NZC: 0 | TICK: 21| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 9 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: t | NZC: 0 | TICK: 24| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 10 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: o | ACC: o | NZC: 0 | TICK: 27| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 11 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: o | ACC: o | NZC: 0 | TICK: 29| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 12 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: o | NZC: 0 | TICK: 32| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 13 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: n | ACC: n | NZC: 0 | TICK: 35| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 14 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: n | ACC: n | NZC: 0 | TICK: 37| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 15 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: n | NZC: 0 | TICK: 40| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 16 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR:  | ACC:  | NZC: 10 | TICK: 43| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 17 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR:  | ACC:  | NZC: 10 | TICK: 45| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 18 | JIFNZ:NOT Z: DR => IP | AR: 2 | IP: 3 | DR:  | ACC:  | NZC: 10 | TICK: 48| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+
+  INFO INSTRUCTION: 19 | HLT | AR: 3 | IP: 4 | DR:  | ACC:  | NZC: 10 | TICK: 49| CR:{'idx': 3, 'opcode': 'hlt', 'operand': None, 'address': False, 'relative': False}

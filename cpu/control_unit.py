@@ -1,5 +1,5 @@
 import logging
-import sys
+import os
 
 import utils.ioutils
 
@@ -7,7 +7,7 @@ IN = 0
 OUT = 1
 
 logging.basicConfig(level=logging.INFO, filename="logs/cpu.log",filemode="w",
-                    format="%(asctime)s %(levelname)s %(message)s")
+                    format="%(levelname)s %(message)s")
 
 class ControlUnit:
 
@@ -125,7 +125,7 @@ class ControlUnit:
         logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr) + "\n")
         logging.info(self.data_path.output)
         utils.ioutils.write_output(str(self.data_path.output))
-        sys.exit()
+        os._exit(1)
 
     def do_jifz(self):
         if(self.data_path.ALU.Z == 1):

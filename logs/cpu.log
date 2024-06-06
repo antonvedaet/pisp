@@ -1,359 +1,359 @@
-2024-06-06 16:36:33,837 INFO INSTRUCTION: 1 | LOAD: DR => ACC | AR: 2 | IP: 1 | DR: W | ACC: W | NZC: 0 | TICK: 3| CR:{'idx': 0, 'opcode': 'load', 'operand': 2, 'address': True, 'relative': False}
+INFO INSTRUCTION: 1 | LOAD: DR => ACC | AR: 2 | IP: 1 | DR: W | ACC: W | NZC: 0 | TICK: 3| CR:{'idx': 0, 'opcode': 'load', 'operand': 2, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,837 INFO INSTRUCTION: 2 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: W | ACC: W | NZC: 0 | TICK: 5| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 2 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: W | ACC: W | NZC: 0 | TICK: 5| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,837 INFO INSTRUCTION: 3 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 2 | ACC: 2 | NZC: 0 | TICK: 8| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 3 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 2 | ACC: 2 | NZC: 0 | TICK: 8| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,837 INFO INSTRUCTION: 4 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 3 | NZC: 0 | TICK: 11| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 4 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 3 | NZC: 0 | TICK: 11| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,837 INFO INSTRUCTION: 5 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 3 | NZC: 0 | TICK: 13| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 5 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 3 | NZC: 0 | TICK: 13| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,837 INFO INSTRUCTION: 6 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: h | ACC: h | NZC: 0 | TICK: 16| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 6 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: h | ACC: h | NZC: 0 | TICK: 16| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,838 INFO INSTRUCTION: 7 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: h | NZC: 0 | TICK: 19| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 7 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: h | NZC: 0 | TICK: 19| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,838 INFO INSTRUCTION: 8 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: h | NZC: 0 | TICK: 21| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 8 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: h | NZC: 0 | TICK: 21| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,838 INFO INSTRUCTION: 9 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 3 | ACC: 3 | NZC: 0 | TICK: 24| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 9 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 3 | ACC: 3 | NZC: 0 | TICK: 24| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,838 INFO INSTRUCTION: 10 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 4 | NZC: 0 | TICK: 27| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 10 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 4 | NZC: 0 | TICK: 27| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,838 INFO INSTRUCTION: 11 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 4 | NZC: 0 | TICK: 29| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 11 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 4 | NZC: 0 | TICK: 29| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,838 INFO INSTRUCTION: 12 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: a | ACC: a | NZC: 0 | TICK: 32| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 12 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: a | ACC: a | NZC: 0 | TICK: 32| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,838 INFO INSTRUCTION: 13 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: a | NZC: 0 | TICK: 35| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 13 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: a | NZC: 0 | TICK: 35| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,838 INFO INSTRUCTION: 14 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: a | NZC: 0 | TICK: 37| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 14 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: a | NZC: 0 | TICK: 37| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,839 INFO INSTRUCTION: 15 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 4 | ACC: 4 | NZC: 0 | TICK: 40| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 15 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 4 | ACC: 4 | NZC: 0 | TICK: 40| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,839 INFO INSTRUCTION: 16 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 5 | NZC: 0 | TICK: 43| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 16 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 5 | NZC: 0 | TICK: 43| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,839 INFO INSTRUCTION: 17 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 5 | NZC: 0 | TICK: 45| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 17 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 5 | NZC: 0 | TICK: 45| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,839 INFO INSTRUCTION: 18 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: t | ACC: t | NZC: 0 | TICK: 48| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 18 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: t | ACC: t | NZC: 0 | TICK: 48| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,839 INFO INSTRUCTION: 19 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: t | NZC: 0 | TICK: 51| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 19 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: t | NZC: 0 | TICK: 51| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,839 INFO INSTRUCTION: 20 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: t | NZC: 0 | TICK: 53| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 20 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: t | NZC: 0 | TICK: 53| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,839 INFO INSTRUCTION: 21 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 5 | ACC: 5 | NZC: 0 | TICK: 56| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 21 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 5 | ACC: 5 | NZC: 0 | TICK: 56| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,839 INFO INSTRUCTION: 22 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 6 | NZC: 0 | TICK: 59| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 22 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 6 | NZC: 0 | TICK: 59| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,840 INFO INSTRUCTION: 23 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 6 | NZC: 0 | TICK: 61| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 23 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 6 | NZC: 0 | TICK: 61| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,840 INFO INSTRUCTION: 24 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 64| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 24 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 64| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,840 INFO INSTRUCTION: 25 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 67| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 25 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 67| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,840 INFO INSTRUCTION: 26 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 69| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 26 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 69| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,840 INFO INSTRUCTION: 27 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 6 | ACC: 6 | NZC: 0 | TICK: 72| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 27 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 6 | ACC: 6 | NZC: 0 | TICK: 72| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,840 INFO INSTRUCTION: 28 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 7 | NZC: 0 | TICK: 75| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 28 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 7 | NZC: 0 | TICK: 75| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,840 INFO INSTRUCTION: 29 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 7 | NZC: 0 | TICK: 77| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 29 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 7 | NZC: 0 | TICK: 77| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,840 INFO INSTRUCTION: 30 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: i | ACC: i | NZC: 0 | TICK: 80| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 30 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: i | ACC: i | NZC: 0 | TICK: 80| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,841 INFO INSTRUCTION: 31 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: i | NZC: 0 | TICK: 83| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 31 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: i | NZC: 0 | TICK: 83| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,841 INFO INSTRUCTION: 32 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: i | NZC: 0 | TICK: 85| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 32 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: i | NZC: 0 | TICK: 85| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,841 INFO INSTRUCTION: 33 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 7 | ACC: 7 | NZC: 0 | TICK: 88| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 33 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 7 | ACC: 7 | NZC: 0 | TICK: 88| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,841 INFO INSTRUCTION: 34 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 8 | NZC: 0 | TICK: 91| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 34 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 8 | NZC: 0 | TICK: 91| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,841 INFO INSTRUCTION: 35 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 8 | NZC: 0 | TICK: 93| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 35 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 8 | NZC: 0 | TICK: 93| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,841 INFO INSTRUCTION: 36 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: s | ACC: s | NZC: 0 | TICK: 96| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 36 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: s | ACC: s | NZC: 0 | TICK: 96| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,841 INFO INSTRUCTION: 37 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: s | NZC: 0 | TICK: 99| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 37 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: s | NZC: 0 | TICK: 99| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,841 INFO INSTRUCTION: 38 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: s | NZC: 0 | TICK: 101| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 38 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: s | NZC: 0 | TICK: 101| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,842 INFO INSTRUCTION: 39 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 8 | ACC: 8 | NZC: 0 | TICK: 104| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 39 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 8 | ACC: 8 | NZC: 0 | TICK: 104| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,842 INFO INSTRUCTION: 40 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 9 | NZC: 0 | TICK: 107| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 40 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 9 | NZC: 0 | TICK: 107| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,842 INFO INSTRUCTION: 41 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 9 | NZC: 0 | TICK: 109| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 41 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 9 | NZC: 0 | TICK: 109| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,842 INFO INSTRUCTION: 42 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 112| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 42 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 112| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,842 INFO INSTRUCTION: 43 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 115| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 43 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 115| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,842 INFO INSTRUCTION: 44 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 117| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 44 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 117| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,842 INFO INSTRUCTION: 45 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 9 | ACC: 9 | NZC: 0 | TICK: 120| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 45 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 9 | ACC: 9 | NZC: 0 | TICK: 120| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,842 INFO INSTRUCTION: 46 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 10 | NZC: 0 | TICK: 123| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 46 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 10 | NZC: 0 | TICK: 123| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,842 INFO INSTRUCTION: 47 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 10 | NZC: 0 | TICK: 125| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 47 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 10 | NZC: 0 | TICK: 125| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,843 INFO INSTRUCTION: 48 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: y | ACC: y | NZC: 0 | TICK: 128| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 48 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: y | ACC: y | NZC: 0 | TICK: 128| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,843 INFO INSTRUCTION: 49 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: y | NZC: 0 | TICK: 131| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 49 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: y | NZC: 0 | TICK: 131| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,843 INFO INSTRUCTION: 50 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: y | NZC: 0 | TICK: 133| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 50 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: y | NZC: 0 | TICK: 133| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,843 INFO INSTRUCTION: 51 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 10 | ACC: 10 | NZC: 0 | TICK: 136| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 51 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 10 | ACC: 10 | NZC: 0 | TICK: 136| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,843 INFO INSTRUCTION: 52 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 11 | NZC: 0 | TICK: 139| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 52 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 11 | NZC: 0 | TICK: 139| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,843 INFO INSTRUCTION: 53 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 11 | NZC: 0 | TICK: 141| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 53 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 11 | NZC: 0 | TICK: 141| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,843 INFO INSTRUCTION: 54 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: o | ACC: o | NZC: 0 | TICK: 144| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 54 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: o | ACC: o | NZC: 0 | TICK: 144| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,843 INFO INSTRUCTION: 55 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: o | NZC: 0 | TICK: 147| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 55 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: o | NZC: 0 | TICK: 147| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,844 INFO INSTRUCTION: 56 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: o | NZC: 0 | TICK: 149| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 56 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: o | NZC: 0 | TICK: 149| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,844 INFO INSTRUCTION: 57 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 11 | ACC: 11 | NZC: 0 | TICK: 152| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 57 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 11 | ACC: 11 | NZC: 0 | TICK: 152| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,844 INFO INSTRUCTION: 58 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 12 | NZC: 0 | TICK: 155| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 58 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 12 | NZC: 0 | TICK: 155| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,844 INFO INSTRUCTION: 59 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 12 | NZC: 0 | TICK: 157| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 59 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 12 | NZC: 0 | TICK: 157| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,844 INFO INSTRUCTION: 60 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: u | ACC: u | NZC: 0 | TICK: 160| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 60 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: u | ACC: u | NZC: 0 | TICK: 160| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,844 INFO INSTRUCTION: 61 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: u | NZC: 0 | TICK: 163| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 61 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: u | NZC: 0 | TICK: 163| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,844 INFO INSTRUCTION: 62 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: u | NZC: 0 | TICK: 165| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 62 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: u | NZC: 0 | TICK: 165| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,844 INFO INSTRUCTION: 63 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 12 | ACC: 12 | NZC: 0 | TICK: 168| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 63 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 12 | ACC: 12 | NZC: 0 | TICK: 168| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,845 INFO INSTRUCTION: 64 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 13 | NZC: 0 | TICK: 171| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 64 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 13 | NZC: 0 | TICK: 171| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,845 INFO INSTRUCTION: 65 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 13 | NZC: 0 | TICK: 173| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 65 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 13 | NZC: 0 | TICK: 173| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,845 INFO INSTRUCTION: 66 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: r | ACC: r | NZC: 0 | TICK: 176| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 66 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: r | ACC: r | NZC: 0 | TICK: 176| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,845 INFO INSTRUCTION: 67 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: r | NZC: 0 | TICK: 179| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 67 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: r | NZC: 0 | TICK: 179| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,845 INFO INSTRUCTION: 68 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: r | NZC: 0 | TICK: 181| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 68 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: r | NZC: 0 | TICK: 181| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,845 INFO INSTRUCTION: 69 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 13 | ACC: 13 | NZC: 0 | TICK: 184| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 69 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 13 | ACC: 13 | NZC: 0 | TICK: 184| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,845 INFO INSTRUCTION: 70 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 14 | NZC: 0 | TICK: 187| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 70 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 14 | NZC: 0 | TICK: 187| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,845 INFO INSTRUCTION: 71 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 14 | NZC: 0 | TICK: 189| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 71 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 14 | NZC: 0 | TICK: 189| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,846 INFO INSTRUCTION: 72 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 192| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 72 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 192| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,846 INFO INSTRUCTION: 73 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 195| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 73 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 195| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,846 INFO INSTRUCTION: 74 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 197| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 74 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 197| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,846 INFO INSTRUCTION: 75 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 14 | ACC: 14 | NZC: 0 | TICK: 200| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 75 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 14 | ACC: 14 | NZC: 0 | TICK: 200| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,846 INFO INSTRUCTION: 76 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 15 | NZC: 0 | TICK: 203| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 76 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 15 | NZC: 0 | TICK: 203| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,846 INFO INSTRUCTION: 77 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 15 | NZC: 0 | TICK: 205| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 77 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 15 | NZC: 0 | TICK: 205| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,846 INFO INSTRUCTION: 78 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: n | ACC: n | NZC: 0 | TICK: 208| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 78 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: n | ACC: n | NZC: 0 | TICK: 208| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,846 INFO INSTRUCTION: 79 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: n | NZC: 0 | TICK: 211| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 79 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: n | NZC: 0 | TICK: 211| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,846 INFO INSTRUCTION: 80 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: n | NZC: 0 | TICK: 213| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 80 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: n | NZC: 0 | TICK: 213| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,847 INFO INSTRUCTION: 81 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 15 | ACC: 15 | NZC: 0 | TICK: 216| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 81 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 15 | ACC: 15 | NZC: 0 | TICK: 216| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,847 INFO INSTRUCTION: 82 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 16 | NZC: 0 | TICK: 219| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 82 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 16 | NZC: 0 | TICK: 219| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,847 INFO INSTRUCTION: 83 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 16 | NZC: 0 | TICK: 221| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 83 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 16 | NZC: 0 | TICK: 221| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,847 INFO INSTRUCTION: 84 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: a | ACC: a | NZC: 0 | TICK: 224| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 84 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: a | ACC: a | NZC: 0 | TICK: 224| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,847 INFO INSTRUCTION: 85 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: a | NZC: 0 | TICK: 227| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 85 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: a | NZC: 0 | TICK: 227| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,847 INFO INSTRUCTION: 86 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: a | NZC: 0 | TICK: 229| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 86 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: a | NZC: 0 | TICK: 229| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,847 INFO INSTRUCTION: 87 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 16 | ACC: 16 | NZC: 0 | TICK: 232| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 87 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 16 | ACC: 16 | NZC: 0 | TICK: 232| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,847 INFO INSTRUCTION: 88 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 17 | NZC: 0 | TICK: 235| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 88 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 17 | NZC: 0 | TICK: 235| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,848 INFO INSTRUCTION: 89 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 17 | NZC: 0 | TICK: 237| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 89 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 17 | NZC: 0 | TICK: 237| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,848 INFO INSTRUCTION: 90 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: m | ACC: m | NZC: 0 | TICK: 240| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 90 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: m | ACC: m | NZC: 0 | TICK: 240| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,848 INFO INSTRUCTION: 91 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: m | NZC: 0 | TICK: 243| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 91 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: m | NZC: 0 | TICK: 243| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,848 INFO INSTRUCTION: 92 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: m | NZC: 0 | TICK: 245| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 92 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: m | NZC: 0 | TICK: 245| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,848 INFO INSTRUCTION: 93 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 17 | ACC: 17 | NZC: 0 | TICK: 248| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 93 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 17 | ACC: 17 | NZC: 0 | TICK: 248| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,848 INFO INSTRUCTION: 94 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 18 | NZC: 0 | TICK: 251| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 94 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 18 | NZC: 0 | TICK: 251| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,848 INFO INSTRUCTION: 95 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 18 | NZC: 0 | TICK: 253| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 95 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 18 | NZC: 0 | TICK: 253| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,848 INFO INSTRUCTION: 96 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: e | ACC: e | NZC: 0 | TICK: 256| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 96 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: e | ACC: e | NZC: 0 | TICK: 256| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,848 INFO INSTRUCTION: 97 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: e | NZC: 0 | TICK: 259| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 97 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: e | NZC: 0 | TICK: 259| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,849 INFO INSTRUCTION: 98 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: e | NZC: 0 | TICK: 261| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 98 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: e | NZC: 0 | TICK: 261| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,849 INFO INSTRUCTION: 99 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 18 | ACC: 18 | NZC: 0 | TICK: 264| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 99 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 18 | ACC: 18 | NZC: 0 | TICK: 264| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,849 INFO INSTRUCTION: 100 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 19 | NZC: 0 | TICK: 267| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 100 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 19 | NZC: 0 | TICK: 267| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,849 INFO INSTRUCTION: 101 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 19 | NZC: 0 | TICK: 269| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 101 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 19 | NZC: 0 | TICK: 269| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,849 INFO INSTRUCTION: 102 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: ? | ACC: ? | NZC: 0 | TICK: 272| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 102 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: ? | ACC: ? | NZC: 0 | TICK: 272| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,849 INFO INSTRUCTION: 103 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: ? | NZC: 0 | TICK: 275| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 103 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: ? | NZC: 0 | TICK: 275| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,849 INFO INSTRUCTION: 104 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: ? | NZC: 0 | TICK: 277| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 104 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: ? | NZC: 0 | TICK: 277| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,849 INFO INSTRUCTION: 105 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 19 | ACC: 19 | NZC: 0 | TICK: 280| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 105 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 19 | ACC: 19 | NZC: 0 | TICK: 280| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,850 INFO INSTRUCTION: 106 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 20 | NZC: 0 | TICK: 283| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 106 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 20 | NZC: 0 | TICK: 283| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,850 INFO INSTRUCTION: 107 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 20 | NZC: 0 | TICK: 285| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 107 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 20 | NZC: 0 | TICK: 285| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,850 INFO INSTRUCTION: 108 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 288| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 108 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 288| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,850 INFO INSTRUCTION: 109 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 291| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 109 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 291| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,850 INFO INSTRUCTION: 110 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 293| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 110 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 293| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,850 INFO INSTRUCTION: 111 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 20 | ACC: 20 | NZC: 0 | TICK: 296| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 111 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 20 | ACC: 20 | NZC: 0 | TICK: 296| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,850 INFO INSTRUCTION: 112 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 21 | NZC: 0 | TICK: 299| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 112 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 21 | NZC: 0 | TICK: 299| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,850 INFO INSTRUCTION: 113 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 21 | NZC: 0 | TICK: 301| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 113 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 21 | NZC: 0 | TICK: 301| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,851 INFO INSTRUCTION: 114 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: H | ACC: H | NZC: 0 | TICK: 304| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 114 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: H | ACC: H | NZC: 0 | TICK: 304| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,851 INFO INSTRUCTION: 115 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: H | NZC: 0 | TICK: 307| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 115 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: H | NZC: 0 | TICK: 307| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,851 INFO INSTRUCTION: 116 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: H | NZC: 0 | TICK: 309| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 116 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: H | NZC: 0 | TICK: 309| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,851 INFO INSTRUCTION: 117 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 21 | ACC: 21 | NZC: 0 | TICK: 312| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 117 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 21 | ACC: 21 | NZC: 0 | TICK: 312| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,851 INFO INSTRUCTION: 118 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 22 | NZC: 0 | TICK: 315| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 118 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 22 | NZC: 0 | TICK: 315| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,851 INFO INSTRUCTION: 119 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 22 | NZC: 0 | TICK: 317| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 119 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 22 | NZC: 0 | TICK: 317| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,851 INFO INSTRUCTION: 120 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: e | ACC: e | NZC: 0 | TICK: 320| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 120 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: e | ACC: e | NZC: 0 | TICK: 320| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,851 INFO INSTRUCTION: 121 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: e | NZC: 0 | TICK: 323| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 121 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: e | NZC: 0 | TICK: 323| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,852 INFO INSTRUCTION: 122 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: e | NZC: 0 | TICK: 325| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 122 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: e | NZC: 0 | TICK: 325| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,852 INFO INSTRUCTION: 123 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 22 | ACC: 22 | NZC: 0 | TICK: 328| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 123 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 22 | ACC: 22 | NZC: 0 | TICK: 328| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,852 INFO INSTRUCTION: 124 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 23 | NZC: 0 | TICK: 331| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 124 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 23 | NZC: 0 | TICK: 331| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,852 INFO INSTRUCTION: 125 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 23 | NZC: 0 | TICK: 333| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 125 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 23 | NZC: 0 | TICK: 333| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,852 INFO INSTRUCTION: 126 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: l | ACC: l | NZC: 0 | TICK: 336| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 126 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: l | ACC: l | NZC: 0 | TICK: 336| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,852 INFO INSTRUCTION: 127 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: l | NZC: 0 | TICK: 339| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 127 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: l | NZC: 0 | TICK: 339| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,852 INFO INSTRUCTION: 128 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: l | NZC: 0 | TICK: 341| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 128 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: l | NZC: 0 | TICK: 341| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,852 INFO INSTRUCTION: 129 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 23 | ACC: 23 | NZC: 0 | TICK: 344| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 129 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 23 | ACC: 23 | NZC: 0 | TICK: 344| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,852 INFO INSTRUCTION: 130 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 24 | NZC: 0 | TICK: 347| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 130 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 24 | NZC: 0 | TICK: 347| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,853 INFO INSTRUCTION: 131 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 24 | NZC: 0 | TICK: 349| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 131 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 24 | NZC: 0 | TICK: 349| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,853 INFO INSTRUCTION: 132 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: l | ACC: l | NZC: 0 | TICK: 352| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 132 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: l | ACC: l | NZC: 0 | TICK: 352| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,853 INFO INSTRUCTION: 133 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: l | NZC: 0 | TICK: 355| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 133 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: l | NZC: 0 | TICK: 355| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,853 INFO INSTRUCTION: 134 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: l | NZC: 0 | TICK: 357| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 134 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: l | NZC: 0 | TICK: 357| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,853 INFO INSTRUCTION: 135 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 24 | ACC: 24 | NZC: 0 | TICK: 360| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 135 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 24 | ACC: 24 | NZC: 0 | TICK: 360| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,853 INFO INSTRUCTION: 136 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 25 | NZC: 0 | TICK: 363| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 136 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 25 | NZC: 0 | TICK: 363| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,853 INFO INSTRUCTION: 137 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 25 | NZC: 0 | TICK: 365| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 137 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 25 | NZC: 0 | TICK: 365| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,853 INFO INSTRUCTION: 138 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: o | ACC: o | NZC: 0 | TICK: 368| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 138 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: o | ACC: o | NZC: 0 | TICK: 368| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,854 INFO INSTRUCTION: 139 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: o | NZC: 0 | TICK: 371| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 139 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: o | NZC: 0 | TICK: 371| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,854 INFO INSTRUCTION: 140 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: o | NZC: 0 | TICK: 373| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 140 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: o | NZC: 0 | TICK: 373| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,854 INFO INSTRUCTION: 141 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 25 | ACC: 25 | NZC: 0 | TICK: 376| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 141 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 25 | ACC: 25 | NZC: 0 | TICK: 376| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,854 INFO INSTRUCTION: 142 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 26 | NZC: 0 | TICK: 379| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 142 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 26 | NZC: 0 | TICK: 379| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,854 INFO INSTRUCTION: 143 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 26 | NZC: 0 | TICK: 381| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 143 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 26 | NZC: 0 | TICK: 381| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,854 INFO INSTRUCTION: 144 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: , | ACC: , | NZC: 0 | TICK: 384| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 144 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR: , | ACC: , | NZC: 0 | TICK: 384| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,854 INFO INSTRUCTION: 145 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: , | NZC: 0 | TICK: 387| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 145 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC: , | NZC: 0 | TICK: 387| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,854 INFO INSTRUCTION: 146 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: , | NZC: 0 | TICK: 389| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 146 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC: , | NZC: 0 | TICK: 389| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,854 INFO INSTRUCTION: 147 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 26 | ACC: 26 | NZC: 0 | TICK: 392| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 147 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 26 | ACC: 26 | NZC: 0 | TICK: 392| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,855 INFO INSTRUCTION: 148 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 27 | NZC: 0 | TICK: 395| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 148 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 27 | NZC: 0 | TICK: 395| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,855 INFO INSTRUCTION: 149 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 27 | NZC: 0 | TICK: 397| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 149 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 27 | NZC: 0 | TICK: 397| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,855 INFO INSTRUCTION: 150 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 400| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 150 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 0 | TICK: 400| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,855 INFO INSTRUCTION: 151 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 403| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 151 | JIFNZ:NOT Z: DR => IP | AR: 1 | IP: 1 | DR: 1 | ACC:   | NZC: 0 | TICK: 403| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,855 INFO INSTRUCTION: 152 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 405| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 152 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: 1 | ACC:   | NZC: 0 | TICK: 405| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,855 INFO INSTRUCTION: 153 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 27 | ACC: 27 | NZC: 0 | TICK: 408| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 153 | LOAD: DR => ACC | AR: 31 | IP: 3 | DR: 27 | ACC: 27 | NZC: 0 | TICK: 408| CR:{'idx': 2, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,855 INFO INSTRUCTION: 154 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 28 | NZC: 0 | TICK: 411| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
+INFO INSTRUCTION: 154 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 1 | ACC: 28 | NZC: 0 | TICK: 411| CR:{'idx': 3, 'opcode': 'add', 'operand': 1, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,855 INFO INSTRUCTION: 155 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 28 | NZC: 0 | TICK: 413| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
+INFO INSTRUCTION: 155 | STORE: ACC => RAM[AR] | AR: 31 | IP: 5 | DR: 1 | ACC: 28 | NZC: 0 | TICK: 413| CR:{'idx': 4, 'opcode': 'store', 'operand': 31, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,855 INFO INSTRUCTION: 156 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 10 | TICK: 416| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
+INFO INSTRUCTION: 156 | LOAD: DR => ACC | AR: 31 | IP: 6 | DR:   | ACC:   | NZC: 10 | TICK: 416| CR:{'idx': 6, 'opcode': 'load', 'operand': 31, 'address': True, 'relative': True}
 
-2024-06-06 16:36:33,856 INFO INSTRUCTION: 157 | JIFNZ:NOT Z: DR => IP | AR: 6 | IP: 7 | DR:   | ACC:   | NZC: 10 | TICK: 419| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 157 | JIFNZ:NOT Z: DR => IP | AR: 6 | IP: 7 | DR:   | ACC:   | NZC: 10 | TICK: 419| CR:{'idx': 7, 'opcode': 'jifnz', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,856 INFO INSTRUCTION: 158 | LOAD: DR => ACC | AR: 0 | IP: 8 | DR: 0 | ACC: 0 | NZC: 10 | TICK: 422| CR:{'idx': 8, 'opcode': 'load', 'operand': 0, 'address': False, 'relative': False}
+INFO INSTRUCTION: 158 | LOAD: DR => ACC | AR: 0 | IP: 8 | DR: 0 | ACC: 0 | NZC: 10 | TICK: 422| CR:{'idx': 8, 'opcode': 'load', 'operand': 0, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,856 INFO INSTRUCTION: 159 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: A | ACC: A | NZC: 0 | TICK: 425| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+INFO INSTRUCTION: 159 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: A | ACC: A | NZC: 0 | TICK: 425| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,856 INFO INSTRUCTION: 160 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: A | ACC: A | NZC: 0 | TICK: 427| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 160 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: A | ACC: A | NZC: 0 | TICK: 427| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,856 INFO INSTRUCTION: 161 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: A | NZC: 0 | TICK: 430| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
+INFO INSTRUCTION: 161 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: A | NZC: 0 | TICK: 430| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,856 INFO INSTRUCTION: 162 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: n | ACC: n | NZC: 0 | TICK: 433| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+INFO INSTRUCTION: 162 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: n | ACC: n | NZC: 0 | TICK: 433| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,856 INFO INSTRUCTION: 163 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: n | ACC: n | NZC: 0 | TICK: 435| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 163 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: n | ACC: n | NZC: 0 | TICK: 435| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,856 INFO INSTRUCTION: 164 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: n | NZC: 0 | TICK: 438| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
+INFO INSTRUCTION: 164 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: n | NZC: 0 | TICK: 438| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,857 INFO INSTRUCTION: 165 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: t | ACC: t | NZC: 0 | TICK: 441| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+INFO INSTRUCTION: 165 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: t | ACC: t | NZC: 0 | TICK: 441| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,857 INFO INSTRUCTION: 166 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: t | ACC: t | NZC: 0 | TICK: 443| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 166 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: t | ACC: t | NZC: 0 | TICK: 443| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,857 INFO INSTRUCTION: 167 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: t | NZC: 0 | TICK: 446| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
+INFO INSTRUCTION: 167 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: t | NZC: 0 | TICK: 446| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,857 INFO INSTRUCTION: 168 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: o | ACC: o | NZC: 0 | TICK: 449| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+INFO INSTRUCTION: 168 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: o | ACC: o | NZC: 0 | TICK: 449| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,857 INFO INSTRUCTION: 169 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: o | ACC: o | NZC: 0 | TICK: 451| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 169 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: o | ACC: o | NZC: 0 | TICK: 451| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,857 INFO INSTRUCTION: 170 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: o | NZC: 0 | TICK: 454| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
+INFO INSTRUCTION: 170 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: o | NZC: 0 | TICK: 454| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,857 INFO INSTRUCTION: 171 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: n | ACC: n | NZC: 0 | TICK: 457| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+INFO INSTRUCTION: 171 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR: n | ACC: n | NZC: 0 | TICK: 457| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,858 INFO INSTRUCTION: 172 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: n | ACC: n | NZC: 0 | TICK: 459| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 172 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR: n | ACC: n | NZC: 0 | TICK: 459| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,858 INFO INSTRUCTION: 173 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: n | NZC: 0 | TICK: 462| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
+INFO INSTRUCTION: 173 | JIFNZ:NOT Z: DR => IP | AR: 8 | IP: 8 | DR: 8 | ACC: n | NZC: 0 | TICK: 462| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,858 INFO INSTRUCTION: 174 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR:   | ACC:   | NZC: 10 | TICK: 465| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+INFO INSTRUCTION: 174 | LOAD: DR => ACC | AR: 0 | IP: 9 | DR:   | ACC:   | NZC: 10 | TICK: 465| CR:{'idx': 9, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,858 INFO INSTRUCTION: 175 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR:   | ACC:   | NZC: 10 | TICK: 467| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 175 | STORE: ACC => RAM[AR] | AR: 1 | IP: 10 | DR:   | ACC:   | NZC: 10 | TICK: 467| CR:{'idx': 10, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,858 INFO INSTRUCTION: 176 | JIFNZ:NOT Z: DR => IP | AR: 10 | IP: 11 | DR:   | ACC:   | NZC: 10 | TICK: 470| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
+INFO INSTRUCTION: 176 | JIFNZ:NOT Z: DR => IP | AR: 10 | IP: 11 | DR:   | ACC:   | NZC: 10 | TICK: 470| CR:{'idx': 11, 'opcode': 'jifnz', 'operand': 8, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,858 INFO INSTRUCTION: 177 | LOAD: DR => ACC | AR: 29 | IP: 12 | DR: ! | ACC: ! | NZC: 0 | TICK: 473| CR:{'idx': 12, 'opcode': 'load', 'operand': 29, 'address': True, 'relative': False}
+INFO INSTRUCTION: 177 | LOAD: DR => ACC | AR: 29 | IP: 12 | DR: ! | ACC: ! | NZC: 0 | TICK: 473| CR:{'idx': 12, 'opcode': 'load', 'operand': 29, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,858 INFO INSTRUCTION: 178 | STORE: ACC => RAM[AR] | AR: 1 | IP: 13 | DR: ! | ACC: ! | NZC: 0 | TICK: 475| CR:{'idx': 13, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 178 | STORE: ACC => RAM[AR] | AR: 1 | IP: 13 | DR: ! | ACC: ! | NZC: 0 | TICK: 475| CR:{'idx': 13, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
 
-2024-06-06 16:36:33,859 INFO INSTRUCTION: 179 | HLT | AR: 13 | IP: 14 | DR: ! | ACC: ! | NZC: 0 | TICK: 476| CR:{'idx': 14, 'opcode': 'hlt', 'operand': None, 'address': False, 'relative': False}
+INFO INSTRUCTION: 179 | HLT | AR: 13 | IP: 14 | DR: ! | ACC: ! | NZC: 0 | TICK: 476| CR:{'idx': 14, 'opcode': 'hlt', 'operand': None, 'address': False, 'relative': False}
 
-2024-06-06 16:36:33,859 INFO ['W', 'h', 'a', 't', ' ', 'i', 's', ' ', 'y', 'o', 'u', 'r', ' ', 'n', 'a', 'm', 'e', '?', ' ', 'H', 'e', 'l', 'l', 'o', ',', ' ', 'A', 'n', 't', 'o', 'n', '!']
+INFO ['W', 'h', 'a', 't', ' ', 'i', 's', ' ', 'y', 'o', 'u', 'r', ' ', 'n', 'a', 'm', 'e', '?', ' ', 'H', 'e', 'l', 'l', 'o', ',', ' ', 'A', 'n', 't', 'o', 'n', '!']
