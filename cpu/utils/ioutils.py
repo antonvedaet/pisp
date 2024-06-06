@@ -3,6 +3,6 @@ def write_output(output, filename="io/output.txt"):
         f.write(output)
 
 def read_input(filename="io/input.txt"):
-    with open(filename, "r") as f:
+    with open(filename) as f:
         contents = f.readline()
     return contents

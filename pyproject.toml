@@ -16,6 +16,7 @@ pytest = "^8.2.2"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.ruff]
 lint.select = [
     # A set of chosen linter rules is specified here.
     # See https://beta.ruff.rs/docs/rules/ for more info.
@@ -69,7 +70,8 @@ lint.select = [
 ]
 
 lint.ignore = [
-    "E721"
+    "E721",
+    "E501"
 ]
 
 [tool.ruff.lint.mccabe]

@@ -1,5 +1,6 @@
-from ALU import ALU
 import utils.ioutils
+from ALU import ALU
+
 
 class DataPath:
 
@@ -15,7 +16,7 @@ class DataPath:
         self.input = eval(utils.ioutils.read_input()) + ["\u0000"]
         self.rom = rom
         self.ram = ram
-    
+
     def fetch_instruction(self):
         self.ar = self.ip
 

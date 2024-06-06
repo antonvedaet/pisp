@@ -1,6 +1,7 @@
-import utils.ioutils
 import logging
 import sys
+
+import utils.ioutils
 
 IN = 0
 OUT = 1
@@ -9,11 +10,11 @@ logging.basicConfig(level=logging.INFO, filename="io/cpu.log",filemode="w",
                     format="%(asctime)s %(levelname)s %(message)s")
 
 class ControlUnit:
-    
+
     def __init__(self, data_path):
         self.data_path = data_path
         self.ic = 0 #instr counter
-        self.ticks = 0 
+        self.ticks = 0
         self.operations={
             "jmp": self.do_jump,
             "load": self.do_load,
@@ -25,9 +26,9 @@ class ControlUnit:
             "jifz": self.do_jifz,
             "jifnz": self.do_jifnz,
             "jifn": self.do_jifn,
-            "jifnn": self.do_jifnn
+            "jifnn": self.do_jifnn,
         }
-    
+
     def run(self):
         print("Input:" + str(self.data_path.input))
         while True:
@@ -71,11 +72,11 @@ class ControlUnit:
             self.data_path.output.append(self.data_path.acc)
         self.ticks += 2
         return "STORE: ACC => RAM[AR]"
-    
+
     def do_jump(self):
         assert self.data_path.cr["address"]
         self.data_path.ar = self.data_path.cr["operand"]
-        self.data_path.dr = self.data_path.ar 
+        self.data_path.dr = self.data_path.ar
         self.data_path.ip = self.data_path.dr
         self.data_path.alu_flags()
         self.ticks += 3
@@ -93,7 +94,7 @@ class ControlUnit:
         self.data_path.alu_flags()
         self.ticks += 3
         return "ADD: ACC + DR => ACC"
-    
+
     def do_sub(self):
         if self.data_path.cr["address"] is False:
             self.data_path.dr = self.data_path.cr["operand"]
@@ -123,14 +124,14 @@ class ControlUnit:
     def do_hlt(self):
         self.ticks += 1
         logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr) + "\n")
-        print(self.data_path.output)
+        logging.info(self.data_path.output)
         utils.ioutils.write_output(str(self.data_path.output))
         sys.exit()
 
     def do_jifz(self):
         if(self.data_path.ALU.Z == 1):
             self.data_path.ar = self.data_path.cr["operand"]
-            self.data_path.dr = self.data_path.ar 
+            self.data_path.dr = self.data_path.ar
             self.data_path.ip = self.data_path.dr
         self.ticks += 3
         return "JIFZ: Z: DR => IP"
@@ -138,7 +139,7 @@ class ControlUnit:
     def do_jifnz(self):
         if(self.data_path.ALU.Z != 1):
             self.data_path.ar = self.data_path.cr["operand"]
-            self.data_path.dr = self.data_path.ar 
+            self.data_path.dr = self.data_path.ar
             self.data_path.ip = self.data_path.dr
         self.ticks += 3
         return "JIFNZ:NOT Z: DR => IP"
@@ -146,7 +147,7 @@ class ControlUnit:
     def do_jifn(self):
         if(self.data_path.ALU.N == 1):
             self.data_path.ar = self.data_path.cr["operand"]
-            self.data_path.dr = self.data_path.ar 
+            self.data_path.dr = self.data_path.ar
             self.data_path.ip = self.data_path.dr
         self.ticks += 3
         return "JIFN:N: DR => IP"
@@ -154,7 +155,7 @@ class ControlUnit:
     def do_jifnn(self):
         if(self.data_path.ALU.N != 1):
             self.data_path.ar = self.data_path.cr["operand"]
-            self.data_path.dr = self.data_path.ar 
+            self.data_path.dr = self.data_path.ar
             self.data_path.ip = self.data_path.dr
         self.ticks += 3
         return "JIFNN:NOT N: DR => IP"

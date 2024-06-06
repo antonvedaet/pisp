@@ -1,10 +1,11 @@
-from control_unit import ControlUnit
-from data_memory import DataMemory
-from instruction_memory import InstructionMemory
-from data_path import DataPath
 import json
 
-with open("pseudo_machine_code.json", "r") as file:
+from control_unit import ControlUnit
+from data_memory import DataMemory
+from data_path import DataPath
+from instruction_memory import InstructionMemory
+
+with open("pseudo_machine_code.json") as file:
     memory = json.load(file)
 ram = DataMemory(2048)
 rom = InstructionMemory()
