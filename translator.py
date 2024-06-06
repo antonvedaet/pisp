@@ -41,7 +41,6 @@ class Translator:
 
     def parse_instruction(self, line):
         if len(line.split())>1:
-            print()
             instruction, operand = line.split()
         else:
             instruction = line.split()[0]

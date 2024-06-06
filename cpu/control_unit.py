@@ -43,7 +43,7 @@ class ControlUnit:
 
     def do_load(self):
         self.data_path.ar = self.data_path.cr["operand"]
-        if self.data_path.ar == IN:
+        if self.data_path.ar == IN and self.data_path.cr["address"] == True:
             self.data_path.dr = self.data_path.input[0]
             self.data_path.input.pop(0)
             self.data_path.acc = self.data_path.dr

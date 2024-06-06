@@ -12,7 +12,7 @@ class DataPath:
         self.dr = 0 #data register
         self.sr = self.ALU.flags() #status register
         self.output = []
-        self.input = list(utils.ioutils.read_input() + "\u0000")
+        self.input = eval(utils.ioutils.read_input()) + ["\u0000"]
         self.rom = rom
         self.ram = ram
     

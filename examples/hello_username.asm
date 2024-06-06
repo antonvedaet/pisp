@@ -12,7 +12,7 @@
             load  &gtmp        
             jifnz greet
         uname:
-            load in
+            load 0
             load in
             store out
             jifnz uname
