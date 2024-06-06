@@ -4,5 +4,4 @@ def write_output(output, filename="io/output.txt"):
 
 def read_input(filename="io/input.txt"):
     with open(filename) as f:
-        contents = f.readline()
-    return contents
+        return f.readline()

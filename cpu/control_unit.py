@@ -6,7 +6,7 @@ import utils.ioutils
 IN = 0
 OUT = 1
 
-logging.basicConfig(level=logging.INFO, filename="io/cpu.log",filemode="w",
+logging.basicConfig(level=logging.INFO, filename="logs/cpu.log",filemode="w",
                     format="%(asctime)s %(levelname)s %(message)s")
 
 class ControlUnit:
@@ -30,7 +30,6 @@ class ControlUnit:
         }
 
     def run(self):
-        print("Input:" + str(self.data_path.input))
         while True:
             try:
                 self.data_path.fetch_instruction()

@@ -71,7 +71,10 @@ lint.select = [
 
 lint.ignore = [
     "E721",
-    "E501"
+    "E501",
+    "INP001",
+    "PTH123",
+    "C901"
 ]
 
 [tool.ruff.lint.mccabe]
