@@ -2,158 +2,147 @@
     {
         "idx": 2,
         "opcode": "nop",
-        "operand": 1,
+        "operand": "H",
         "address": false
     },
     {
         "idx": 3,
         "opcode": "nop",
-        "operand": 2,
+        "operand": "e",
         "address": false
     },
     {
         "idx": 4,
         "opcode": "nop",
-        "operand": 2,
+        "operand": "l",
         "address": false
     },
     {
         "idx": 5,
         "opcode": "nop",
-        "operand": 0,
+        "operand": "l",
+        "address": false
+    },
+    {
+        "idx": 6,
+        "opcode": "nop",
+        "operand": "o",
+        "address": false
+    },
+    {
+        "idx": 7,
+        "opcode": "nop",
+        "operand": ",",
+        "address": false
+    },
+    {
+        "idx": 8,
+        "opcode": "nop",
+        "operand": " ",
+        "address": false
+    },
+    {
+        "idx": 9,
+        "opcode": "nop",
+        "operand": "w",
+        "address": false
+    },
+    {
+        "idx": 10,
+        "opcode": "nop",
+        "operand": "o",
+        "address": false
+    },
+    {
+        "idx": 11,
+        "opcode": "nop",
+        "operand": "r",
+        "address": false
+    },
+    {
+        "idx": 12,
+        "opcode": "nop",
+        "operand": "l",
+        "address": false
+    },
+    {
+        "idx": 13,
+        "opcode": "nop",
+        "operand": "d",
+        "address": false
+    },
+    {
+        "idx": 14,
+        "opcode": "nop",
+        "operand": "!",
+        "address": false
+    },
+    {
+        "idx": 15,
+        "opcode": "nop",
+        "operand": "\u0000",
+        "address": false
+    },
+    {
+        "idx": 16,
+        "opcode": "nop",
+        "operand": 2,
         "address": false
     },
     {
         "idx": 0,
         "opcode": "load",
-        "operand": 4,
+        "operand": 2,
         "address": true,
         "relative": false
     },
     {
         "idx": 1,
         "opcode": "store",
-        "operand": 3,
+        "operand": 1,
         "address": true,
         "relative": false
     },
     {
         "idx": 2,
         "opcode": "load",
-        "operand": 2,
+        "operand": 16,
         "address": true,
         "relative": false
     },
     {
         "idx": 3,
         "opcode": "add",
-        "operand": 3,
-        "address": true,
+        "operand": 1,
+        "address": false,
         "relative": false
     },
     {
         "idx": 4,
         "opcode": "store",
-        "operand": 4,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 5,
-        "opcode": "load",
-        "operand": 3,
+        "operand": 16,
         "address": true,
         "relative": false
     },
     {
         "idx": 6,
-        "opcode": "store",
-        "operand": 2,
+        "opcode": "load",
+        "operand": 16,
         "address": true,
-        "relative": false
+        "relative": true
     },
     {
         "idx": 7,
-        "opcode": "mod",
-        "operand": 2,
-        "address": false,
-        "relative": false
-    },
-    {
-        "idx": 8,
-        "opcode": "jifz",
-        "operand": 15,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 9,
-        "opcode": "load",
-        "operand": 3,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 10,
-        "opcode": "sub",
-        "operand": 4000000,
-        "address": false,
-        "relative": false
-    },
-    {
-        "idx": 11,
-        "opcode": "jifn",
-        "operand": 0,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 12,
-        "opcode": "load",
-        "operand": 5,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 13,
-        "opcode": "store",
+        "opcode": "jifnz",
         "operand": 1,
         "address": true,
         "relative": false
     },
     {
-        "idx": 14,
+        "idx": 8,
         "opcode": "hlt",
         "operand": null,
         "address": false,
-        "relative": false
-    },
-    {
-        "idx": 15,
-        "opcode": "load",
-        "operand": 5,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 16,
-        "opcode": "add",
-        "operand": 3,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 17,
-        "opcode": "store",
-        "operand": 5,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 18,
-        "opcode": "jmp",
-        "operand": 9,
-        "address": true,
         "relative": false
     }
 ]

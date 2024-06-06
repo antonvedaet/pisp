@@ -1,9 +1,12 @@
 import utils.ioutils
-
+import logging
 import sys
 
 IN = 0
 OUT = 1
+
+logging.basicConfig(level=logging.INFO, filename="io/cpu.log",filemode="w",
+                    format="%(asctime)s %(levelname)s %(message)s")
 
 class ControlUnit:
     
@@ -24,7 +27,6 @@ class ControlUnit:
             "jifn": self.do_jifn,
             "jifnn": self.do_jifnn
         }
-        self.log = ""
     
     def run(self):
         print("Input:" + str(self.data_path.input))
@@ -33,7 +35,7 @@ class ControlUnit:
                 self.data_path.fetch_instruction()
                 self.ic += 1
                 if self.data_path.cr["opcode"] in self.operations:
-                    self.log += ("INSTRUCTION: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "\n")
+                    logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr) + "\n")
             except IndexError as _:
                 break
 
@@ -120,9 +122,7 @@ class ControlUnit:
 
     def do_hlt(self):
         self.ticks += 1
-        self.log += ("INSTRUCTION: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "\n")
-        print(self.log)
-        utils.ioutils.write_output(self.log, "io/cpu.log")
+        logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr) + "\n")
         print(self.data_path.output)
         utils.ioutils.write_output(str(self.data_path.output))
         sys.exit()
