@@ -1,4 +1,4 @@
-from isa import *
+from isa import OpCode, OpType
 import json
 
 
@@ -22,9 +22,9 @@ class Translator:
     def sections(self, source):
         stripped_src = []
 
-        for l in source:
-            l = l.strip()
-            stripped_src.append(l)
+        for line in source:
+            line = line.strip()
+            stripped_src.append(line)
         
         data, code = [], []
         section = None

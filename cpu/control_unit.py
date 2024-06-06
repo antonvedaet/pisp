@@ -1,10 +1,6 @@
-from instruction_memory import InstructionMemory
-from data_memory import DataMemory
-from data_path import DataPath
 import utils.ioutils
 
 import sys
-import time
 
 IN = 0
 OUT = 1
@@ -43,15 +39,15 @@ class ControlUnit:
 
     def do_load(self):
         self.data_path.ar = self.data_path.cr["operand"]
-        if self.data_path.ar == IN and self.data_path.cr["address"] == True:
+        if self.data_path.ar == IN and self.data_path.cr["address"]:
             self.data_path.dr = self.data_path.input[0]
             self.data_path.input.pop(0)
             self.data_path.acc = self.data_path.dr
-        elif self.data_path.cr["address"] == False:
+        elif self.data_path.cr["address"] is False:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.acc = self.data_path.dr
         else:
-            if self.data_path.cr["relative"] == False:
+            if self.data_path.cr["relative"] is False:
                 self.data_path.dr = self.data_path.ar
                 self.data_path.dr = self.data_path.ram.read(self.data_path.dr)
                 self.data_path.acc = self.data_path.dr
@@ -65,7 +61,7 @@ class ControlUnit:
         return "LOAD: DR => ACC"
 
     def do_store(self):
-        assert self.data_path.cr["address"] == True
+        assert self.data_path.cr["address"]
         self.data_path.ar = self.data_path.cr["operand"]
         self.data_path.ram.write(self.data_path.ar, self.data_path.acc)
         self.data_path.alu_flags()
@@ -75,7 +71,7 @@ class ControlUnit:
         return "STORE: ACC => RAM[AR]"
     
     def do_jump(self):
-        assert self.data_path.cr["address"] == True
+        assert self.data_path.cr["address"]
         self.data_path.ar = self.data_path.cr["operand"]
         self.data_path.dr = self.data_path.ar 
         self.data_path.ip = self.data_path.dr
@@ -84,7 +80,7 @@ class ControlUnit:
         return "JUMP: DR => IP"
 
     def do_add(self):
-        if self.data_path.cr["address"] == False:
+        if self.data_path.cr["address"] is False:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ALU.add(self.data_path.acc, self.data_path.dr)
             self.data_path.acc = self.data_path.ALU.value
@@ -97,7 +93,7 @@ class ControlUnit:
         return "ADD: ACC + DR => ACC"
     
     def do_sub(self):
-        if self.data_path.cr["address"] == False:
+        if self.data_path.cr["address"] is False:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ALU.sub(self.data_path.acc, self.data_path.dr)
             self.data_path.acc = self.data_path.ALU.value
@@ -110,7 +106,7 @@ class ControlUnit:
         return "SUB: ACC - DR => ACC"
 
     def do_mod(self):
-        if self.data_path.cr["address"] == False:
+        if self.data_path.cr["address"] is False:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ALU.mod(self.data_path.acc, self.data_path.dr)
             self.data_path.acc = self.data_path.ALU.value

@@ -12,13 +12,13 @@ class ALU:
         self.C = 0 #если при сдвиге бита направо становиться единичкой то число нечетное
     
     def refresh_flags(self):
-        if type(self.value) == str and self.value == "\u0000":
+        if type(self.value) == str and self.value == "\u0000":  # noqa: E721
             self.N = 0
             self.Z = 1
             self.C = 0
-        if type(self.value) == str:
+        if type(self.value) == str:  # noqa: E721
             self.value = ord(self.value)
-        if type(self.value) != str:
+        if type(self.value) != str:  # noqa: E721
             if self.value > MAX_VALUE or self.value < MIN_VALUE:
                 self.C = 1
                 self.value  =  self.value % (MAX_VALUE + 1)
