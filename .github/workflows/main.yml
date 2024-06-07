@@ -42,9 +42,9 @@ jobs:
         pip install poetry
         poetry unstall
       env:
-       CI: true
+        CI: true
     
-    -name: Runs tests
+    -name: Run tests
       run: |
         poetry run coverage run -m pytest .
         poetry run coverage report -m
