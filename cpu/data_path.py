@@ -1,10 +1,10 @@
-import utils.ioutils
-from ALU import ALU
+import cpu.ioutils
+from cpu.ALU import ALU
 
 
 class DataPath:
 
-    def __init__(self, rom, ram):
+    def __init__(self, rom, ram, input_file):
         self.ALU = ALU()
         self.acc = 0
         self.cr = 0 #command register
@@ -13,7 +13,7 @@ class DataPath:
         self.dr = 0 #data register
         self.sr = self.ALU.flags() #status register
         self.output = []
-        self.input = [*eval(utils.ioutils.read_input()), "\x00"]
+        self.input = [*eval(cpu.ioutils.read_input(input_file)), "\x00"]
         self.rom = rom
         self.ram = ram
 

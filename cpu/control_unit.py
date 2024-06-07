@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 
-import utils.ioutils
+import cpu.ioutils
 
 IN = 0
 OUT = 1
@@ -134,7 +134,7 @@ class ControlUnit:
         self.ticks += 1
         logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr))
         logging.info(self.data_path.output)
-        utils.ioutils.write_output(str(self.data_path.output))
+        cpu.ioutils.write_output(str(self.data_path.output))
         os._exit(1)
 
     def do_jifz(self):
