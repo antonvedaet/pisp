@@ -9,14 +9,14 @@ from cpu_runner import CpuRunner
 import translator
 
 
-@pytest.mark.golden_test("golden/cat.yml")
+@pytest.mark.golden_test("golden/*.yml")
 def test_cat(golden):
     # Setup temporary directories and files
     with tempfile.TemporaryDirectory() as tmpdirname:
-        asm_file = os.path.join(tmpdirname, "input.asm")
+        asm_file = os.path.join(tmpdirname, "examples/input.asm")
         json_file = os.path.join(tmpdirname, "pseudo_machine_code.json")
 
-        with open(asm_file, 'w') as f:
+        with open(asm_file, "w") as f:
             f.write(golden["in_src"])
 
         tr = translator.Translator()
