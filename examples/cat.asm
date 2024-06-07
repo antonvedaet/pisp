@@ -2,7 +2,7 @@
 .code 
     begin:
         load in
-        store out
+        store out ;comment test
         jifnz &0
         hlt
     end

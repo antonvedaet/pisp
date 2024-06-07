@@ -24,6 +24,8 @@ class Translator:
         stripped_src = []
 
         for line in source:
+            if ";" in line:
+                line = line[0:line.index(";")]
             line = line.strip()
             stripped_src.append(line)
 
