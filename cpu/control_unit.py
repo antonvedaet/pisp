@@ -1,5 +1,4 @@
 import logging
-import os
 import sys
 
 import cpu.ioutils
@@ -39,7 +38,10 @@ class ControlUnit:
                 self.data_path.fetch_instruction()
                 self.ic += 1
                 if self.data_path.cr["opcode"] in self.operations:
-                    logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr))
+                    if self.data_path.cr["opcode"] == "hlt":
+                        self.operations[self.data_path.cr["opcode"]]()
+                    else:
+                        logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr))
             except IndexError as _:
                 break
 
@@ -135,7 +137,6 @@ class ControlUnit:
         logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ "HLT" + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr))
         logging.info(self.data_path.output)
         cpu.ioutils.write_output(str(self.data_path.output))
-        os._exit(1)
 
     def do_jifz(self):
         if(self.data_path.ALU.Z == 1):

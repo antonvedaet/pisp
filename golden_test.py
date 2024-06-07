@@ -24,13 +24,14 @@ def test(golden, caplog):
             file.write(golden["in_input"])
 
         translate.translate(src, target)
+        with open(target, encoding="utf-8") as file:
+            code = file.read()
         CpuRunner().run(input_text, target)
 
         with open(target, encoding="utf-8") as file:
             code = file.read()
+        caplog_text = caplog.text.replace("\x00", "")
 
-        caplog_text = caplog.text.replace("\x00", " ")
-
-        assert code == golden.out["out_src"]
         assert caplog_text == golden.out["out_log"]
+        assert code == golden.out["out_src"]
 

@@ -11,36 +11,36 @@ in_input: |-
   ['A', 'n', 't', 'o', 'n']
 out_src: |-
   [
-    {
-        "idx": 0,
-        "opcode": "load",
-        "operand": 0,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 1,
-        "opcode": "store",
-        "operand": 1,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 2,
-        "opcode": "jifnz",
-        "operand": 0,
-        "address": true,
-        "relative": false
-    },
-    {
-        "idx": 3,
-        "opcode": "hlt",
-        "operand": null,
-        "address": false,
-        "relative": false
-    }
+      {
+          "idx": 0,
+          "opcode": "load",
+          "operand": 0,
+          "address": true,
+          "relative": false
+      },
+      {
+          "idx": 1,
+          "opcode": "store",
+          "operand": 1,
+          "address": true,
+          "relative": false
+      },
+      {
+          "idx": 2,
+          "opcode": "jifnz",
+          "operand": 0,
+          "address": true,
+          "relative": false
+      },
+      {
+          "idx": 3,
+          "opcode": "hlt",
+          "operand": null,
+          "address": false,
+          "relative": false
+      }
   ]
-out_log: |-
+out_log: |
   INFO INSTRUCTION: 1 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: A | ACC: A | NZC: 0 | TICK: 3| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
   INFO INSTRUCTION: 2 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: A | ACC: A | NZC: 0 | TICK: 7| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
   INFO INSTRUCTION: 3 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: A | NZC: 0 | TICK: 12| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
