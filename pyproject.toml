@@ -83,7 +83,9 @@ lint.ignore = [
     "E501",
     "INP001",
     "PTH123",
-    "C901"
+    "C901",
+    "PTH118",
+    "N999"
 ]
 
 [tool.ruff.lint.mccabe]
