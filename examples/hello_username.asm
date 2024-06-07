@@ -3,6 +3,7 @@
     excl: "!"
     gtmp: 2
 .code
+    begin:
         load greeting
         greet:
             store out

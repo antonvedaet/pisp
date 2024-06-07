@@ -40,8 +40,8 @@ class ControlUnit:
                 if self.data_path.cr["opcode"] in self.operations:
                     if self.data_path.cr["opcode"] == "hlt":
                         self.operations[self.data_path.cr["opcode"]]()
-                    else:
-                        logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr))
+                        break
+                    logging.info("INSTRUCTION: "+ str(self.ic) +" | "+ self.operations[self.data_path.cr["opcode"]]() + " | " + self.data_path.info() + " | TICK: " + str(self.ticks) + "| CR:" + str(self.data_path.cr))
             except IndexError as _:
                 break
 
