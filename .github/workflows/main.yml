@@ -45,7 +45,7 @@ jobs:
        CI: true
     
     -name: Runs tests
-     run: |
+      run: |
         poetry run coverage run -m pytest .
         poetry run coverage report -m
         
