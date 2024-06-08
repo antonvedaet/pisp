@@ -143,7 +143,7 @@ samplelabel:
 Команды кодируются в `.json` файлы.  
 #### Пример:  
 Исходный код программы `cat`:  
-```endf
+```
   .data
   .code 
       begin:
@@ -154,7 +154,7 @@ samplelabel:
       end
 ```
 Закодированная программа `cat`:
-```endf
+```json
   [
       {
           "idx": 0,
@@ -194,11 +194,145 @@ samplelabel:
 
 
 
+## Трансляция
+Использование: `python3 translate_cl.py <source_file> <output_file>`
+
+Реализация: [translator.py](./translator.py)
+
+#### Принцип работы:
+ 1. Построчное чтение исходного файла
+ 2. Разбиение на секции `.data` и `.code`
+ 3. Транслирование секции `.data` в массив `nop` операций
+ 4. Транслирование секции `.code` в массив инструкций
+ 5. Сериализация и запись в `json` файл
+
+#### Правила:
+ - Одно выражение(т.е обьявление переменной, команда) - одна строка.
+ - Метка только на отдельной строке перед командой на которую она ссылается.
+ - Использование меток и переменных исключительно после их объявления.
+
+ ## Модель процессора
+
+ ## Тестирование
+  - Тестирование при помощи `pytest-golden`
+  - [golden_test](./golden_test.py)
+  - Конфигурация golden-test'ов в [директории](./golden/)
+
+  Тесты реализованы по всем алгоритмам из варианта.
+
+  #### Github Actions CI
+  ```yml
+        name: lint and test
+
+        on: [push, pull_request]
+
+        jobs:
+                lint:
+                        runs-on: ubuntu-latest
+
+                        steps:
+                        - name: Checkout code
+                        uses: actions/checkout@v2
+
+                        - name: Set up Python
+                        uses: actions/setup-python@v2
+                        with:
+                                python-version: '3.11.8' 
+
+                        - name: Install dependencies
+                        run: |
+                                python -m pip install --upgrade pip
+                                pip install ruff
+
+                        - name: Run ruff
+        run: |
+                ruff check
+
+                test:
+                        runs-on: ubuntu-latest
+
+                        steps:
+                        - name: Checkout code
+                        uses: actions/checkout@v2
+
+                        - name: Set up Python
+                        uses: actions/setup-python@v2
+                        with:
+                                python-version: '3.11.8' 
+
+                        - name: Install dependencies
+                        run: |
+                                python -m pip install --upgrade pip
+                                pip install poetry
+                                poetry install
+                        
+                        - name: Run tests
+                        run: |
+                                poetry run coverage run -m pytest . -v
+                                poetry run coverage report -m
+                        
+        
+ ```
+#### Пример выполнения prob2:
+[Исходный код](./examples/prob2.asm):
 ```
-| ФИО                           | алг          | LoC | code инстр. | инстр. | такт. |
-| Ведерников Антон Владимирович | cat          | 8   | 4           | 19     | 73    |
-| Ведерников Антон Владимирович | hellousername| 23  | 13          | 179    | 766   |
-| Ведерников Антон Владимирович | helloworld   | 15  | 8           | 80     | 344   |
-| Ведерников Антон Владимирович | prob2        | 30  | 19          | 431    | 1915  |
+.data
+    f: 1
+    s: 2
+    nxt: 2
+    r: 0
+.code 
+    begin:
+        mainloop:
+            load nxt ; acc = nxt
+            store s ; s = acc
+            load f ; acc = f
+            add s ; acc += s
+            store nxt ; nxt = s
+            load s ; acc = s
+            store f ; f = acc
+            mod 2 ; проверяем четное число или нет
+            jifz &15 ; если число четное то переходим к метку count по абсолютному адресу, т.к она еще не объявлена 
+        limit:
+            load s ; просто проверяем что число не больше 4000000
+            sub 4000000
+            jifn mainloop
+            load r
+            store out
+            hlt ; если же оно больше то прекращаем работу программы
+        count:
+            load r
+            add s
+            store r
+            jmp limit
+    end
 ```
-```python3 runner.py <input file> <machine code file>```
+Лог работы процессора и вывод можно увидеть в [файле](./logs/prob2_cpu.log)
+#### Пример работы тестов и линтера
+```
+============================= test session starts ==============================
+platform linux -- Python 3.11.8, pytest-8.2.2, pluggy-1.5.0 -- /home/runner/.cache/pypoetry/virtualenvs/pisp-jhoDnaUe-py3.11/bin/python
+cachedir: .pytest_cache
+rootdir: /home/runner/work/pisp/pisp
+configfile: pyproject.toml
+plugins: golden-0.2.2
+collecting ... collected 4 items
+
+golden_test.py::test[golden/cat.yml] PASSED                              [ 25%]
+golden_test.py::test[golden/hello_username.yml] PASSED                   [ 50%]
+golden_test.py::test[golden/hello_world.yml] PASSED                      [ 75%]
+golden_test.py::test[golden/prob2.yml] PASSED                            [100%]
+
+============================== 4 passed in 0.43s ===============================
+
+Run ruff check
+All checks passed!
+```
+
+```
+| ФИО                           | алг          | LoC | code инстр. | инстр. | такт. |                            вар                                         |
+| Ведерников Антон Владимирович | cat          | 8   | 4           | 19     | 73    |  asm | acc | harv | hw | instr | struct | stream | mem | cstr | prob2  |
+| Ведерников Антон Владимирович | hellousername| 23  | 13          | 179    | 766   |  asm | acc | harv | hw | instr | struct | stream | mem | cstr | prob2  |
+| Ведерников Антон Владимирович | helloworld   | 15  | 8           | 80     | 344   |  asm | acc | harv | hw | instr | struct | stream | mem | cstr | prob2  |
+| Ведерников Антон Владимирович | prob2        | 30  | 19          | 431    | 1915  |  asm | acc | harv | hw | instr | struct | stream | mem | cstr | prob2  |
+```
