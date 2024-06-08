@@ -268,7 +268,7 @@ samplelabel:
                         
                         - name: Run tests
                         run: |
-                                poetry run coverage run -m pytest . -v
+                                poetry run coverage run -m pytest . -v --ignore=translate_cl.py
                                 poetry run coverage report -m
                         
         
