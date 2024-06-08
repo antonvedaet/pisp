@@ -64,7 +64,7 @@ samplelabel:
 Во время трансляции `jifnz samplelabel` замениться на `jifnz &0` (при условии что `samplelabel` находиться в самом начале секции `.code`)
 ## Организация памяти
 - Память команд и память данных разделены
-- Длина машинного слова `32 бита`
+- Длина машинного слова в памяти данных `32 бита`
 - Адреса `0` и `1` в памяти данных являются адресами ввода и вывода соответственно 
 ```
         data memory
@@ -75,7 +75,7 @@ samplelabel:
 |             .              |
 |             .              |
 |             .              |
-| 2047 :       ...           |
+| 2047 :     ...             |
 +----------------------------+
 
      instruction memory
@@ -86,7 +86,7 @@ samplelabel:
 |             .              |
 |             .              |
 |             .              |
-| 2047 :       ...           |
+| n :        ...             |
 +----------------------------+
 
 		   Registers
@@ -232,21 +232,21 @@ samplelabel:
 
                         steps:
                         - name: Checkout code
-                        uses: actions/checkout@v2
+                          uses: actions/checkout@v2
 
                         - name: Set up Python
                         uses: actions/setup-python@v2
-                        with:
+                          with:
                                 python-version: '3.11.8' 
 
                         - name: Install dependencies
-                        run: |
+                          run: |
                                 python -m pip install --upgrade pip
                                 pip install ruff
 
                         - name: Run ruff
-        run: |
-                ruff check
+                          run: |
+                               ruff check
 
                 test:
                         runs-on: ubuntu-latest
@@ -257,11 +257,11 @@ samplelabel:
 
                         - name: Set up Python
                         uses: actions/setup-python@v2
-                        with:
+                          with:
                                 python-version: '3.11.8' 
 
                         - name: Install dependencies
-                        run: |
+                          run: |
                                 python -m pip install --upgrade pip
                                 pip install poetry
                                 poetry install
