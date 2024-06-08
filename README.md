@@ -307,7 +307,42 @@ samplelabel:
             jmp limit
     end
 ```
-Лог работы процессора и вывод можно увидеть в [файле](./logs/prob2_cpu.log)
+Лог работы процессора и вывод можно увидеть в [файле](./logs/prob2_cpu.log), здесь же последние 30 строк лога и вывод. Так как лог получился слишком большой для вменяемого отображения в README.md
+```log
+INFO INSTRUCTION: 400 | JIFN:N: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: -1821691 | NZC: 100 | TICK: 1780| CR:{'idx': 11, 'opcode': 'jifn', 'operand': 0, 'address': True, 'relative': False}
+INFO INSTRUCTION: 401 | LOAD: DR => ACC | AR: 4 | IP: 1 | DR: 3524578 | ACC: 3524578 | NZC: 0 | TICK: 1785| CR:{'idx': 0, 'opcode': 'load', 'operand': 4, 'address': True, 'relative': False}
+INFO INSTRUCTION: 402 | STORE: ACC => RAM[AR] | AR: 3 | IP: 2 | DR: 3524578 | ACC: 3524578 | NZC: 0 | TICK: 1789| CR:{'idx': 1, 'opcode': 'store', 'operand': 3, 'address': True, 'relative': False}
+INFO INSTRUCTION: 403 | LOAD: DR => ACC | AR: 2 | IP: 3 | DR: 2178309 | ACC: 2178309 | NZC: 0 | TICK: 1794| CR:{'idx': 2, 'opcode': 'load', 'operand': 2, 'address': True, 'relative': False}
+INFO INSTRUCTION: 404 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 3524578 | ACC: 5702887 | NZC: 0 | TICK: 1799| CR:{'idx': 3, 'opcode': 'add', 'operand': 3, 'address': True, 'relative': False}
+INFO INSTRUCTION: 405 | STORE: ACC => RAM[AR] | AR: 4 | IP: 5 | DR: 3524578 | ACC: 5702887 | NZC: 0 | TICK: 1803| CR:{'idx': 4, 'opcode': 'store', 'operand': 4, 'address': True, 'relative': False}
+INFO INSTRUCTION: 406 | LOAD: DR => ACC | AR: 3 | IP: 6 | DR: 3524578 | ACC: 3524578 | NZC: 0 | TICK: 1808| CR:{'idx': 5, 'opcode': 'load', 'operand': 3, 'address': True, 'relative': False}
+INFO INSTRUCTION: 407 | STORE: ACC => RAM[AR] | AR: 2 | IP: 7 | DR: 3524578 | ACC: 3524578 | NZC: 0 | TICK: 1812| CR:{'idx': 6, 'opcode': 'store', 'operand': 2, 'address': True, 'relative': False}
+INFO INSTRUCTION: 408 | MOD: ACC % DR => ACC | AR: 7 | IP: 8 | DR: 2 | ACC: 0 | NZC: 10 | TICK: 1815| CR:{'idx': 7, 'opcode': 'mod', 'operand': 2, 'address': False, 'relative': False}
+INFO INSTRUCTION: 409 | JIFZ: Z: DR => IP | AR: 15 | IP: 15 | DR: 15 | ACC: 0 | NZC: 10 | TICK: 1820| CR:{'idx': 8, 'opcode': 'jifz', 'operand': 15, 'address': True, 'relative': False}
+INFO INSTRUCTION: 410 | LOAD: DR => ACC | AR: 5 | IP: 16 | DR: 1089154 | ACC: 1089154 | NZC: 0 | TICK: 1825| CR:{'idx': 15, 'opcode': 'load', 'operand': 5, 'address': True, 'relative': False}
+INFO INSTRUCTION: 411 | ADD: ACC + DR => ACC | AR: 16 | IP: 17 | DR: 3524578 | ACC: 4613732 | NZC: 0 | TICK: 1830| CR:{'idx': 16, 'opcode': 'add', 'operand': 3, 'address': True, 'relative': False}
+INFO INSTRUCTION: 412 | STORE: ACC => RAM[AR] | AR: 5 | IP: 18 | DR: 3524578 | ACC: 4613732 | NZC: 0 | TICK: 1834| CR:{'idx': 17, 'opcode': 'store', 'operand': 5, 'address': True, 'relative': False}
+INFO INSTRUCTION: 413 | JUMP: DR => IP | AR: 9 | IP: 9 | DR: 9 | ACC: 4613732 | NZC: 0 | TICK: 1839| CR:{'idx': 18, 'opcode': 'jmp', 'operand': 9, 'address': True, 'relative': False}
+INFO INSTRUCTION: 414 | LOAD: DR => ACC | AR: 3 | IP: 10 | DR: 3524578 | ACC: 3524578 | NZC: 0 | TICK: 1844| CR:{'idx': 9, 'opcode': 'load', 'operand': 3, 'address': True, 'relative': False}
+INFO INSTRUCTION: 415 | SUB: ACC - DR => ACC | AR: 10 | IP: 11 | DR: 4000000 | ACC: -475422 | NZC: 100 | TICK: 1847| CR:{'idx': 10, 'opcode': 'sub', 'operand': 4000000, 'address': False, 'relative': False}
+INFO INSTRUCTION: 416 | JIFN:N: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: -475422 | NZC: 100 | TICK: 1852| CR:{'idx': 11, 'opcode': 'jifn', 'operand': 0, 'address': True, 'relative': False}
+INFO INSTRUCTION: 417 | LOAD: DR => ACC | AR: 4 | IP: 1 | DR: 5702887 | ACC: 5702887 | NZC: 0 | TICK: 1857| CR:{'idx': 0, 'opcode': 'load', 'operand': 4, 'address': True, 'relative': False}
+INFO INSTRUCTION: 418 | STORE: ACC => RAM[AR] | AR: 3 | IP: 2 | DR: 5702887 | ACC: 5702887 | NZC: 0 | TICK: 1861| CR:{'idx': 1, 'opcode': 'store', 'operand': 3, 'address': True, 'relative': False}
+INFO INSTRUCTION: 419 | LOAD: DR => ACC | AR: 2 | IP: 3 | DR: 3524578 | ACC: 3524578 | NZC: 0 | TICK: 1866| CR:{'idx': 2, 'opcode': 'load', 'operand': 2, 'address': True, 'relative': False}
+INFO INSTRUCTION: 420 | ADD: ACC + DR => ACC | AR: 3 | IP: 4 | DR: 5702887 | ACC: 9227465 | NZC: 0 | TICK: 1871| CR:{'idx': 3, 'opcode': 'add', 'operand': 3, 'address': True, 'relative': False}
+INFO INSTRUCTION: 421 | STORE: ACC => RAM[AR] | AR: 4 | IP: 5 | DR: 5702887 | ACC: 9227465 | NZC: 0 | TICK: 1875| CR:{'idx': 4, 'opcode': 'store', 'operand': 4, 'address': True, 'relative': False}
+INFO INSTRUCTION: 422 | LOAD: DR => ACC | AR: 3 | IP: 6 | DR: 5702887 | ACC: 5702887 | NZC: 0 | TICK: 1880| CR:{'idx': 5, 'opcode': 'load', 'operand': 3, 'address': True, 'relative': False}
+INFO INSTRUCTION: 423 | STORE: ACC => RAM[AR] | AR: 2 | IP: 7 | DR: 5702887 | ACC: 5702887 | NZC: 0 | TICK: 1884| CR:{'idx': 6, 'opcode': 'store', 'operand': 2, 'address': True, 'relative': False}
+INFO INSTRUCTION: 424 | MOD: ACC % DR => ACC | AR: 7 | IP: 8 | DR: 2 | ACC: 1 | NZC: 0 | TICK: 1887| CR:{'idx': 7, 'opcode': 'mod', 'operand': 2, 'address': False, 'relative': False}
+INFO INSTRUCTION: 425 | JIFZ: Z: DR => IP | AR: 8 | IP: 9 | DR: 2 | ACC: 1 | NZC: 0 | TICK: 1892| CR:{'idx': 8, 'opcode': 'jifz', 'operand': 15, 'address': True, 'relative': False}
+INFO INSTRUCTION: 426 | LOAD: DR => ACC | AR: 3 | IP: 10 | DR: 5702887 | ACC: 5702887 | NZC: 0 | TICK: 1897| CR:{'idx': 9, 'opcode': 'load', 'operand': 3, 'address': True, 'relative': False}
+INFO INSTRUCTION: 427 | SUB: ACC - DR => ACC | AR: 10 | IP: 11 | DR: 4000000 | ACC: 1702887 | NZC: 0 | TICK: 1900| CR:{'idx': 10, 'opcode': 'sub', 'operand': 4000000, 'address': False, 'relative': False}
+INFO INSTRUCTION: 428 | JIFN:N: DR => IP | AR: 11 | IP: 12 | DR: 4000000 | ACC: 1702887 | NZC: 0 | TICK: 1905| CR:{'idx': 11, 'opcode': 'jifn', 'operand': 0, 'address': True, 'relative': False}
+INFO INSTRUCTION: 429 | LOAD: DR => ACC | AR: 5 | IP: 13 | DR: 4613732 | ACC: 4613732 | NZC: 0 | TICK: 1910| CR:{'idx': 12, 'opcode': 'load', 'operand': 5, 'address': True, 'relative': False}
+INFO INSTRUCTION: 430 | STORE: ACC => RAM[AR] | AR: 1 | IP: 14 | DR: 4613732 | ACC: 4613732 | NZC: 0 | TICK: 1914| CR:{'idx': 13, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+INFO INSTRUCTION: 431 | HLT | AR: 14 | IP: 15 | DR: 4613732 | ACC: 4613732 | NZC: 0 | TICK: 1915| CR:{'idx': 14, 'opcode': 'hlt', 'operand': None, 'address': False, 'relative': False}
+INFO [4613732]
+```
 #### Пример работы тестов и линтера
 ```
 ============================= test session starts ==============================
