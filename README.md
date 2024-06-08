@@ -276,7 +276,7 @@ samplelabel:
 |                              |                  |                             |
 |                              +---signals------->|                             |
 |     Instruction decoder      |                  |          Data Path          |
-|                              |                  |                             |
+|                              |<---flags---------+                             |
 |                              |                  |                             |
 +------------------------------+                  |                             |
                ^                                   |                             |
