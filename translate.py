@@ -14,3 +14,6 @@ def translate(filename=False, target="pseudo_machine_code.json"):
     tr = Translator()
     tr.translate(file)
     tr.save_as_json(target)
+
+
+translate()
