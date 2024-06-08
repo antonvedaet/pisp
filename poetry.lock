@@ -282,3 +282,4 @@ test = ["django", "django (<2)", "mock", "pytest (>=3.6)", "pytest-cov", "pytest
 lock-version = "2.0"
 python-versions = "^3.11"
 content-hash = "fa263b981e461a2479fe2d1b43f3f41f8aeb7137f11186f10ee186bbcf3beb61"
+

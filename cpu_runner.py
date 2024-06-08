@@ -12,6 +12,7 @@ class CpuRunner:
             memory = json.load(file)
         ram = DataMemory(2048)
         rom = InstructionMemory()
+
         instrcopy = memory.copy()
         for i in memory:
             if i["opcode"] == "nop":
