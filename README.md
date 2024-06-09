@@ -278,7 +278,7 @@ samplelabel:
 |         |         |                              |                  |                             |
 |         +-------->|                              |                  |                             |
 |  Tick   |         |                              +----signals------>|                             |
-|         |<--------+     Instruction decoder      |                  |          Data Path          |
+|Generator|<--------+     Instruction decoder      |                  |          Data Path          |
 |         |         |                              |                  |                             |
 |         |         |                              |<---flags---------+                             |
 +---------+         +------------------------------+                  |                             |
