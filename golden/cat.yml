@@ -41,23 +41,23 @@ out_src: |-
       }
   ]
 out_log: |
-  INFO INSTRUCTION: 1 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: A | ACC: A | NZC: 0 | TICK: 3| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 2 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: A | ACC: A | NZC: 0 | TICK: 7| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 3 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: A | NZC: 0 | TICK: 12| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 4 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: n | ACC: n | NZC: 0 | TICK: 15| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 5 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: n | ACC: n | NZC: 0 | TICK: 19| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 6 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: n | NZC: 0 | TICK: 24| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 7 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: t | ACC: t | NZC: 0 | TICK: 27| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 8 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: t | ACC: t | NZC: 0 | TICK: 31| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 9 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: t | NZC: 0 | TICK: 36| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 10 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: o | ACC: o | NZC: 0 | TICK: 39| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 11 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: o | ACC: o | NZC: 0 | TICK: 43| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 12 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: o | NZC: 0 | TICK: 48| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 13 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: n | ACC: n | NZC: 0 | TICK: 51| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 14 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: n | ACC: n | NZC: 0 | TICK: 55| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 15 | JIFNZ:NOT Z: DR => IP | AR: 0 | IP: 0 | DR: 0 | ACC: n | NZC: 0 | TICK: 60| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 16 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR:  | ACC:  | NZC: 10 | TICK: 63| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 17 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR:  | ACC:  | NZC: 10 | TICK: 67| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 18 | JIFNZ:NOT Z: DR => IP | AR: 2 | IP: 3 | DR:  | ACC:  | NZC: 10 | TICK: 72| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
-  INFO INSTRUCTION: 19 | HLT | AR: 3 | IP: 4 | DR:  | ACC:  | NZC: 10 | TICK: 73| CR:{'idx': 3, 'opcode': 'hlt', 'operand': None, 'address': False, 'relative': False}
-  INFO ['A', 'n', 't', 'o', 'n']
+    INFO INSTRUCTION: 1 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: A | ACC: A | NZC: 0 | TICK: 4| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 2 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: A | ACC: A | NZC: 0 | TICK: 8| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 3 | JIFNZ:NOT Z: DR => IP | AR: 2 | IP: 0 | DR: 0 | ACC: A | NZC: 0 | TICK: 12| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 4 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: n | ACC: n | NZC: 0 | TICK: 16| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 5 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: n | ACC: n | NZC: 0 | TICK: 20| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 6 | JIFNZ:NOT Z: DR => IP | AR: 2 | IP: 0 | DR: 0 | ACC: n | NZC: 0 | TICK: 24| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 7 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: t | ACC: t | NZC: 0 | TICK: 28| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 8 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: t | ACC: t | NZC: 0 | TICK: 32| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 9 | JIFNZ:NOT Z: DR => IP | AR: 2 | IP: 0 | DR: 0 | ACC: t | NZC: 0 | TICK: 36| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 10 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: o | ACC: o | NZC: 0 | TICK: 40| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 11 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: o | ACC: o | NZC: 0 | TICK: 44| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 12 | JIFNZ:NOT Z: DR => IP | AR: 2 | IP: 0 | DR: 0 | ACC: o | NZC: 0 | TICK: 48| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 13 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR: n | ACC: n | NZC: 0 | TICK: 52| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 14 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR: n | ACC: n | NZC: 0 | TICK: 56| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 15 | JIFNZ:NOT Z: DR => IP | AR: 2 | IP: 0 | DR: 0 | ACC: n | NZC: 0 | TICK: 60| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 16 | LOAD: DR => ACC | AR: 0 | IP: 1 | DR:  | ACC:  | NZC: 10 | TICK: 64| CR:{'idx': 0, 'opcode': 'load', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 17 | STORE: ACC => RAM[AR] | AR: 1 | IP: 2 | DR:  | ACC:  | NZC: 10 | TICK: 68| CR:{'idx': 1, 'opcode': 'store', 'operand': 1, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 18 | JIFNZ:NOT Z: DR => IP | AR: 2 | IP: 3 | DR:  | ACC:  | NZC: 10 | TICK: 72| CR:{'idx': 2, 'opcode': 'jifnz', 'operand': 0, 'address': True, 'relative': False}
+    INFO INSTRUCTION: 19 | HLT | AR: 3 | IP: 4 | DR:  | ACC:  | NZC: 10 | TICK: 73| CR:{'idx': 3, 'opcode': 'hlt', 'operand': None, 'address': False, 'relative': False}
+    INFO ['A', 'n', 't', 'o', 'n']

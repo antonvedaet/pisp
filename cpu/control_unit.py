@@ -51,23 +51,23 @@ class ControlUnit:
             self.data_path.dr = self.data_path.input[0]
             self.data_path.input.pop(0)
             self.data_path.acc = self.data_path.dr
-            self.ticks += 3
+            self.ticks += 4
         elif self.data_path.cr["address"] is False:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.acc = self.data_path.dr
-            self.ticks += 3
+            self.ticks += 4
         else:
             if self.data_path.cr["relative"] is False:
                 self.data_path.dr = self.data_path.ar
                 self.data_path.dr = self.data_path.ram.read(self.data_path.dr)
                 self.data_path.acc = self.data_path.dr
-                self.ticks += 5
+                self.ticks += 4
             else:
                 self.data_path.dr = self.data_path.ar
                 self.data_path.dr = self.data_path.ram.read(self.data_path.dr)
                 self.data_path.dr = self.data_path.ram.read(self.data_path.dr)
                 self.data_path.acc = self.data_path.dr
-                self.ticks += 5
+                self.ticks += 6
         self.data_path.alu_flags()
         return "LOAD: DR => ACC"
 
@@ -83,11 +83,10 @@ class ControlUnit:
 
     def do_jump(self):
         assert self.data_path.cr["address"]
-        self.data_path.ar = self.data_path.cr["operand"]
-        self.data_path.dr = self.data_path.ar
+        self.data_path.dr = self.data_path.cr["operand"]
         self.data_path.ip = self.data_path.dr
         self.data_path.alu_flags()
-        self.ticks += 5
+        self.ticks += 4
         return "JUMP: DR => IP"
 
     def do_add(self):
@@ -95,12 +94,12 @@ class ControlUnit:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ALU.add(self.data_path.acc, self.data_path.dr)
             self.data_path.acc = self.data_path.ALU.value
-            self.ticks += 3
+            self.ticks += 4
         else:
             self.data_path.dr = self.data_path.ram.read(self.data_path.cr["operand"])
             self.data_path.ALU.add(self.data_path.acc, self.data_path.dr)
             self.data_path.acc = self.data_path.ALU.value
-            self.ticks += 5
+            self.ticks += 6
         self.data_path.alu_flags()
         return "ADD: ACC + DR => ACC"
 
@@ -109,12 +108,12 @@ class ControlUnit:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ALU.sub(self.data_path.acc, self.data_path.dr)
             self.data_path.acc = self.data_path.ALU.value
-            self.ticks += 3
+            self.ticks += 4
         else:
             self.data_path.dr = self.data_path.ram.read(self.data_path.cr["operand"])
             self.data_path.ALU.sub(self.data_path.acc, self.data_path.dr)
             self.data_path.acc = self.data_path.ALU.value
-            self.ticks += 5
+            self.ticks += 6
         self.data_path.alu_flags()
         return "SUB: ACC - DR => ACC"
 
@@ -123,12 +122,12 @@ class ControlUnit:
             self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ALU.mod(self.data_path.acc, self.data_path.dr)
             self.data_path.acc = self.data_path.ALU.value
-            self.ticks += 3
+            self.ticks += 4
         else:
             self.data_path.dr = self.data_path.ram.read(self.data_path.cr["operand"])
             self.data_path.ALU.mod(self.data_path.acc, self.data_path.dr)
             self.data_path.acc = self.data_path.ALU.value
-            self.ticks += 5
+            self.ticks += 6
         self.data_path.alu_flags()
         return "MOD: ACC % DR => ACC"
 
@@ -140,32 +139,28 @@ class ControlUnit:
 
     def do_jifz(self):
         if(self.data_path.ALU.Z == 1):
-            self.data_path.ar = self.data_path.cr["operand"]
-            self.data_path.dr = self.data_path.ar
+            self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ip = self.data_path.dr
-        self.ticks += 5
+        self.ticks += 4
         return "JIFZ: Z: DR => IP"
 
     def do_jifnz(self):
         if(self.data_path.ALU.Z != 1):
-            self.data_path.ar = self.data_path.cr["operand"]
-            self.data_path.dr = self.data_path.ar
+            self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ip = self.data_path.dr
-        self.ticks += 5
+        self.ticks += 4
         return "JIFNZ:NOT Z: DR => IP"
 
     def do_jifn(self):
         if(self.data_path.ALU.N == 1):
-            self.data_path.ar = self.data_path.cr["operand"]
-            self.data_path.dr = self.data_path.ar
+            self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ip = self.data_path.dr
-        self.ticks += 5
+        self.ticks += 4
         return "JIFN:N: DR => IP"
 
     def do_jifnn(self):
         if(self.data_path.ALU.N != 1):
-            self.data_path.ar = self.data_path.cr["operand"]
-            self.data_path.dr = self.data_path.ar
+            self.data_path.dr = self.data_path.cr["operand"]
             self.data_path.ip = self.data_path.dr
-        self.ticks += 5
+        self.ticks += 4
         return "JIFNN:NOT N: DR => IP"
